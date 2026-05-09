@@ -7,7 +7,7 @@ const iconMap = { FileText, ClipboardCheck, Users, ShieldCheck }
 
 export function ComplianceCare() {
   return (
-    <section className="bg-linen py-20 md:py-28 lg:py-32">
+    <section id="compliance" className="bg-linen py-20 md:py-28 lg:py-32 border-t border-gold/10">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <AnimateOnScroll>

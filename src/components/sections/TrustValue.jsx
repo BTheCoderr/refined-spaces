@@ -8,7 +8,7 @@ const iconMap = { Shield, TrendingUp, Handshake }
 
 export function TrustValue() {
   return (
-    <section className="bg-linen py-20 md:py-28 lg:py-32">
+    <section id="why-us" className="bg-linen py-20 md:py-28 lg:py-32">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center mb-14 lg:mb-18">
           <AnimateOnScroll>

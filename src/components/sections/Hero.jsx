@@ -47,7 +47,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="max-w-xl mx-auto text-linen/60 text-[15px] md:text-base leading-relaxed mb-12"
+          className="max-w-xl mx-auto text-linen/75 text-[15px] md:text-base leading-relaxed mb-12"
         >
           {HERO.subheadline}
         </motion.p>

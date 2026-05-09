@@ -5,7 +5,7 @@ import { AnimateOnScroll } from '../ui/AnimateOnScroll'
 
 export function Process() {
   return (
-    <section id="process" className="bg-cream py-20 md:py-28 lg:py-32">
+    <section id="process" className="bg-cream py-20 md:py-28 lg:py-32 border-t border-gold/10">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center mb-14 lg:mb-18">
           <AnimateOnScroll>
