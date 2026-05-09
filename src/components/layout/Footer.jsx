@@ -42,6 +42,9 @@ export function Footer() {
               Contact
             </h4>
             <ul className="space-y-3">
+              <li className="text-sm font-medium text-ivory/70 tracking-wide">
+                {FOOTER.contact.company}
+              </li>
               <li>
                 <a
                   href={`mailto:${FOOTER.contact.email}`}

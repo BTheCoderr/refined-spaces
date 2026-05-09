@@ -83,7 +83,7 @@ export function RefinedSpacesLogo({ variant = 'horizontal', theme = 'transparent
     <svg viewBox="0 0 1600 620" className={className} aria-label="Refined Spaces" role="img">
       {onDark && <rect width="1600" height="620" fill={COLORS.navy} />}
       <g transform="translate(95 60) scale(0.86)"><LogoEmblemInner /></g>
-      <line x1="555" y1="135" x2="555" y2="500" stroke={COLORS.gold} strokeWidth="2.5" opacity="0.8" />
+      <line x1="554" y1="135" x2="554" y2="500" stroke={COLORS.gold} strokeWidth="2.5" opacity="0.8" />
       <text x="650" y="285" fill={textColor} fontFamily="Cormorant Garamond, Playfair Display, Georgia, serif" fontSize="74" letterSpacing="0.22em">REFINED SPACES</text>
       <text x="655" y="380" fill={COLORS.gold} fontFamily="DM Sans, Jost, Arial, sans-serif" fontSize="24" fontWeight="300" letterSpacing="0.24em">CURATED STAYS. ELEVATED EXPERIENCES.</text>
     </svg>

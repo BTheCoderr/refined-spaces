@@ -84,7 +84,7 @@ export const handler = async (event) => {
       from: fromEmail,
       to: toEmail,
       replyTo: email,
-      subject: `New Refined Spaces inquiry from ${name}`,
+      subject: `Refined Spaces website inquiry (${name})`,
       text: textBody,
       html: `
         <p><strong>Name:</strong> ${safeName}</p>

@@ -43,7 +43,7 @@ export function FinalCTA() {
         await sendNotificationEmail(data)
       })
       .catch(() => {
-        window.location.href = `mailto:${FOOTER.contact.email}?subject=${encodeURIComponent('Inquiry from ' + data.get('name'))}&body=${encodeURIComponent(data.get('message'))}`
+        window.location.href = `mailto:${FOOTER.contact.email}?subject=${encodeURIComponent('Refined Spaces — Website inquiry')}&body=${encodeURIComponent(String(data.get('message') ?? ''))}`
       })
   }
 
@@ -64,6 +64,7 @@ export function FinalCTA() {
                 {FINAL_CTA.subheadline}
               </p>
               <div className="space-y-4">
+                <p className="font-serif text-lg text-ivory/90 tracking-wide">{FOOTER.contact.company}</p>
                 <div className="flex items-center gap-3 text-linen/50 text-sm">
                   <Phone className="w-4 h-4 text-gold shrink-0" strokeWidth={1.5} />
                   <a
@@ -80,7 +81,7 @@ export function FinalCTA() {
                   </a>
                 </div>
                 <p className="text-linen/35 text-xs leading-relaxed pl-7">
-                  Typically respond within one business day.
+                  Our team typically responds within one business day.
                 </p>
               </div>
             </div>
@@ -92,7 +93,7 @@ export function FinalCTA() {
                 <CheckCircle className="w-10 h-10 text-gold mx-auto mb-4" strokeWidth={1.5} />
                 <h3 className="font-serif text-xl font-semibold text-ivory mb-2">Thank You</h3>
                 <p className="text-slate/70 text-sm leading-relaxed">
-                  Your message has been received. We will be in touch soon.
+                  Thank you—a member of the Refined Spaces team will follow up soon.
                 </p>
               </div>
             ) : (

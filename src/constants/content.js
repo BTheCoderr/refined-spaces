@@ -10,7 +10,7 @@ export const HERO = {
   headline: 'Curated Stays. Elevated Experiences.',
   subheadline:
     'Refined Spaces delivers boutique-hotel-level property management for discerning owners and unforgettable stays for every guest.',
-  primaryCta: 'Partner With Us',
+  primaryCta: 'Partner with Refined Spaces',
   secondaryCta: 'Explore the Guest Experience',
 }
 
@@ -42,8 +42,8 @@ export const TRUST = {
 
 export const OWNER_SERVICES = {
   eyebrow: 'Owner Services',
-  headline: 'Full-Service Management, Personally Delivered',
-  body: "From the moment you partner with us, every aspect of your property's operation is handled with precision, care, and a commitment to excellence.",
+  headline: 'Full-Service Management from Our Team',
+  body: "From the moment you partner with Refined Spaces, every aspect of your property's operation is handled with precision, care, and a commitment to excellence.",
   services: [
     {
       title: 'Listing Optimization',
@@ -152,7 +152,7 @@ export const PROCESS = {
       number: '01',
       title: 'Discover',
       description:
-        'We learn about your property, your goals, and your expectations.',
+        'Our team learns about your property, your goals, and your expectations.',
     },
     {
       number: '02',
@@ -182,9 +182,9 @@ export const PROCESS = {
 }
 
 export const FINAL_CTA = {
-  headline: 'Start a Conversation',
+  headline: 'Contact the Refined Spaces Team',
   subheadline:
-    'Whether you own a property in Providence or are planning your next Rhode Island stay, we would be glad to hear from you.',
+    'Whether you own a Providence property or are planning your next Rhode Island stay, our team is here to help. Share a few details and we will follow up.',
 }
 
 export const FOOTER = {
@@ -197,6 +197,7 @@ export const FOOTER = {
     { label: 'About Providence', href: '#providence' },
   ],
   contact: {
+    company: 'Refined Spaces',
     email: 'werefinespaces@gmail.com',
     phone: '(401) 952-7897',
     phoneTel: '+14019527897',

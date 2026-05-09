@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useScrollPosition } from '../../hooks/useScrollPosition'
-import { NAV_LINKS, FOOTER } from '../../constants/content'
+import { HERO, NAV_LINKS, FOOTER } from '../../constants/content'
 import { Button } from '../ui/Button'
 import { RefinedSpacesLogo } from '../brand/RefinedSpacesLogo'
 
@@ -44,7 +44,7 @@ export function Navbar() {
               </a>
             ))}
             <Button href="#contact" size="small">
-              Partner With Us
+              {HERO.primaryCta}
             </Button>
           </div>
 
@@ -98,9 +98,10 @@ export function Navbar() {
                 className="pt-6"
               >
                 <Button href="#contact" onClick={() => setMobileOpen(false)} className="w-full justify-center">
-                  Partner With Us
+                  {HERO.primaryCta}
                 </Button>
                 <div className="mt-8 pt-6 border-t border-ivory/10 flex flex-col gap-3 text-center">
+                  <span className="text-sm font-medium text-ivory/60">{FOOTER.contact.company}</span>
                   <a
                     href={`tel:${FOOTER.contact.phoneTel}`}
                     onClick={() => setMobileOpen(false)}
