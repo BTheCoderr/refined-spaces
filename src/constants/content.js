@@ -197,7 +197,7 @@ export const FOOTER = {
     { label: 'About Providence', href: '#providence' },
   ],
   contact: {
-    email: 'jdjonfelix@gmail.com',
+    email: 'werefinedspaces@gmail.com',
   },
   legal: [
     { label: 'Privacy Policy' },

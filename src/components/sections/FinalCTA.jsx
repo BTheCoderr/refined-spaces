@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FINAL_CTA } from '../../constants/content'
+import { FINAL_CTA, FOOTER } from '../../constants/content'
 import { Button } from '../ui/Button'
 import { AnimateOnScroll } from '../ui/AnimateOnScroll'
 import { RefinedSpacesLogo } from '../brand/RefinedSpacesLogo'
@@ -20,7 +20,7 @@ export function FinalCTA() {
     })
       .then(() => setSubmitted(true))
       .catch(() => {
-        window.location.href = `mailto:jdjonfelix@gmail.com?subject=${encodeURIComponent('Inquiry from ' + data.get('name'))}&body=${encodeURIComponent(data.get('message'))}`
+        window.location.href = `mailto:${FOOTER.contact.email}?subject=${encodeURIComponent('Inquiry from ' + data.get('name'))}&body=${encodeURIComponent(data.get('message'))}`
       })
   }
 
@@ -43,8 +43,8 @@ export function FinalCTA() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-linen/50 text-sm">
                   <Send className="w-4 h-4 text-gold shrink-0" strokeWidth={1.5} />
-                  <a href="mailto:jdjonfelix@gmail.com" className="hover:text-gold transition-colors">
-                    jdjonfelix@gmail.com
+                  <a href={`mailto:${FOOTER.contact.email}`} className="hover:text-gold transition-colors">
+                    {FOOTER.contact.email}
                   </a>
                 </div>
                 <p className="text-linen/35 text-xs leading-relaxed pl-7">
@@ -103,7 +103,7 @@ export function FinalCTA() {
                     name="email"
                     required
                     className="w-full bg-navy/60 border border-ivory/10 rounded px-4 py-3 text-sm text-ivory placeholder-ivory/25 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/25 transition-colors"
-                    placeholder="you@email.com"
+                    placeholder="your@email.address"
                   />
                 </div>
 

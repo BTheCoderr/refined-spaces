@@ -4,6 +4,8 @@ Boutique-hotel-level property management in Providence, Rhode Island. Curated st
 
 **Live site:** [refinedspaces.netlify.app](https://refinedspaces.netlify.app/)
 
+**Public inquiries:** **werefinedspaces@gmail.com** (also in `src/constants/content.js`)
+
 ---
 
 ## Local Development
@@ -48,6 +50,8 @@ Publish directory: `dist`
 - **Animation:** Framer Motion
 - **Icons:** Lucide React
 - **Forms:** Netlify Forms (with mailto fallback)
+
+Secrets (not committed): copy `.env.example` to `.env` and add `RESEND_API_KEY` for transactional email backends.
 
 ## Brand System
 
