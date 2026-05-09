@@ -1,16 +1,121 @@
-# React + Vite
+# Refined Spaces
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Boutique-hotel-level property management in Providence, Rhode Island. Curated stays for guests. Trusted management for owners.
 
-Currently, two official plugins are available:
+**Live site:** [refinedspaces.netlify.app](https://refinedspaces.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Local Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Opens at `http://localhost:5173`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Build
+
+```bash
+npm run build
+```
+
+Output goes to `dist/`.
+
+## Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Deploy
+
+Hosted on [Netlify](https://www.netlify.com/). Deploys from the `main` branch automatically.
+
+- **Preview deploy:** `netlify deploy`
+- **Production deploy:** `netlify deploy --prod`
+
+Build command: `npm run build`
+Publish directory: `dist`
+
+---
+
+## Tech Stack
+
+- **Framework:** React 19 + Vite 8
+- **Styling:** Tailwind CSS 4
+- **Animation:** Framer Motion
+- **Icons:** Lucide React
+- **Forms:** Netlify Forms (with mailto fallback)
+
+## Brand System
+
+### Colors
+
+| Token       | Hex       | Usage                        |
+|-------------|-----------|------------------------------|
+| Navy        | `#0E1E2D` | Primary dark / backgrounds   |
+| Navy Light  | `#162838` | Card backgrounds (dark)      |
+| Gold        | `#C5A96A` | Accent / CTAs / icons        |
+| Gold Light  | `#D4BA88` | Hover states                 |
+| Ivory       | `#FFFDF9` | Text on dark                 |
+| Cream       | `#FDFBF7` | Light section backgrounds    |
+| Linen       | `#F5F0E8` | Alternate light backgrounds  |
+| Charcoal    | `#2E3A3F` | Body text on light           |
+| Slate       | `#4A6070` | Secondary text               |
+
+### Typography
+
+| Role    | Font               | Usage                   |
+|---------|--------------------|-------------------------|
+| Serif   | Playfair Display   | Headlines, logo wordmark|
+| Sans    | DM Sans            | Body copy, UI text      |
+| Accent  | Cormorant Garamond | Eyebrows, editorial     |
+
+### Logo
+
+The **Modern Gateway** mark — an architectural arch with centered "R" — appears in multiple lockups:
+
+- `LogoCompact` — Navbar (icon + wordmark)
+- `LogoIcon` — Hero, favicon, small placements
+- `LogoFooter` — Footer (icon + wordmark + tagline + location)
+- `LogoStacked` / `LogoHorizontal` — Available for collateral
+
+All lockups are defined in `src/components/ui/Logo.jsx`.
+
+---
+
+## Project Structure
+
+```
+src/
+├── App.jsx                     # Root layout
+├── main.jsx                    # Entry point
+├── index.css                   # Theme tokens + global styles
+├── constants/
+│   └── content.js              # All copy in one place
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.jsx
+│   │   └── Footer.jsx
+│   ├── sections/
+│   │   ├── Hero.jsx
+│   │   ├── TrustValue.jsx
+│   │   ├── OwnerServices.jsx
+│   │   ├── GuestExperience.jsx
+│   │   ├── RhodeIsland.jsx
+│   │   ├── ComplianceCare.jsx
+│   │   ├── Process.jsx
+│   │   └── FinalCTA.jsx        # Contact form (Netlify Forms)
+│   └── ui/
+│       ├── AnimateOnScroll.jsx
+│       ├── BackToTop.jsx
+│       ├── Button.jsx
+│       ├── Card.jsx
+│       ├── Logo.jsx
+│       ├── SectionEyebrow.jsx
+│       └── TimelineStep.jsx
+└── hooks/
+    └── useScrollPosition.js
+```
