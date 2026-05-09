@@ -8,6 +8,7 @@ import { RhodeIsland } from './components/sections/RhodeIsland'
 import { ComplianceCare } from './components/sections/ComplianceCare'
 import { Process } from './components/sections/Process'
 import { FinalCTA } from './components/sections/FinalCTA'
+import { BackToTop } from './components/ui/BackToTop'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <FinalCTA />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   )
 }
