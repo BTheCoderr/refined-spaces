@@ -182,11 +182,9 @@ export const PROCESS = {
 }
 
 export const FINAL_CTA = {
-  headline: 'Partner With Refined Spaces',
+  headline: 'Start a Conversation',
   subheadline:
     'Whether you own a property in Providence or are planning your next Rhode Island stay, we would be glad to hear from you.',
-  primaryCta: 'Start a Conversation',
-  secondaryCta: 'Learn More About Our Services',
 }
 
 export const FOOTER = {

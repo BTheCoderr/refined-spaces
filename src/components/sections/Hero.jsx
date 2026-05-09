@@ -8,7 +8,7 @@ export function Hero() {
     <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
-        alt=""
+        alt="Modern luxury property managed by Refined Spaces in Providence, Rhode Island"
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
         fetchPriority="high"

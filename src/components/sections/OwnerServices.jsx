@@ -32,14 +32,22 @@ export function OwnerServices() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {OWNER_SERVICES.services.map((service, i) => (
-            <Card
+            <div
               key={service.title}
-              icon={iconMap[service.icon]}
-              title={service.title}
-              description={service.description}
-              variant="dark"
-              delay={i * 0.08}
-            />
+              className={
+                i === OWNER_SERVICES.services.length - 1
+                  ? 'sm:col-span-2 lg:col-span-1'
+                  : ''
+              }
+            >
+              <Card
+                icon={iconMap[service.icon]}
+                title={service.title}
+                description={service.description}
+                variant="dark"
+                delay={i * 0.08}
+              />
+            </div>
           ))}
         </div>
       </div>
