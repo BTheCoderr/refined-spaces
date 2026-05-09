@@ -197,11 +197,10 @@ export const FOOTER = {
     { label: 'About Providence', href: '#providence' },
   ],
   contact: {
-    email: 'hello@refinedspaces.com',
-    phone: '(401) 555-0192',
+    email: 'jdjonfelix@gmail.com',
   },
   legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
+    { label: 'Privacy Policy' },
+    { label: 'Terms of Service' },
   ],
 }

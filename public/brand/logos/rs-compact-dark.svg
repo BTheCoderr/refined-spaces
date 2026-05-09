@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
 <title id="title">Refined Spaces Logo</title>
 <desc id="desc">Luxury hospitality logo for Refined Spaces featuring an architectural arched emblem and R monogram.</desc>
-
-<g transform="translate(0 0) scale(1)" stroke="#C5A96A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<rect width="1200" height="620" fill="#0E1E2D"/>
+<g transform="translate(80 60) scale(0.86)" stroke="#C5A96A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
   <path d="M 148 398 L 148 175 A 108 108 0 0 1 364 175 L 364 398" fill="none"/>
   <path d="M 170 386 L 170 178 A 86 86 0 0 1 342 178 L 342 386" fill="none" opacity="0.72"/>
   <path d="M128 394 L128 174 M140 394 L140 174 M120 394 H151 M120 174 H151" fill="none"/>
@@ -27,4 +27,7 @@
   <text x="256" y="333" text-anchor="middle" fill="#C5A96A" stroke="none" font-family="Cormorant Garamond, Playfair Display, Libre Baskerville, Georgia, 'Times New Roman', serif" font-size="190" font-weight="400">R</text>
   <g stroke="#C5A96A"></g>
 </g>
+
+<text x="520" y="252" text-anchor="start" fill="#C5A96A" font-family="Cormorant Garamond, Playfair Display, Libre Baskerville, Georgia, 'Times New Roman', serif" font-size="78" font-weight="400" letter-spacing="0.18em">REFINED</text>
+<text x="520" y="341.7" text-anchor="start" fill="#C5A96A" font-family="Cormorant Garamond, Playfair Display, Libre Baskerville, Georgia, 'Times New Roman', serif" font-size="78" font-weight="400" letter-spacing="0.18em">SPACES</text>
 </svg>

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { FINAL_CTA } from '../../constants/content'
 import { Button } from '../ui/Button'
 import { AnimateOnScroll } from '../ui/AnimateOnScroll'
-import { LogoIcon } from '../ui/Logo'
+import { RefinedSpacesLogo } from '../brand/RefinedSpacesLogo'
 import { Send, CheckCircle } from 'lucide-react'
 
 export function FinalCTA() {
@@ -20,14 +20,14 @@ export function FinalCTA() {
     })
       .then(() => setSubmitted(true))
       .catch(() => {
-        window.location.href = `mailto:hello@refinedspaces.com?subject=${encodeURIComponent('Inquiry from ' + data.get('name'))}&body=${encodeURIComponent(data.get('message'))}`
+        window.location.href = `mailto:jdjonfelix@gmail.com?subject=${encodeURIComponent('Inquiry from ' + data.get('name'))}&body=${encodeURIComponent(data.get('message'))}`
       })
   }
 
   return (
     <section id="contact" className="bg-navy py-24 md:py-32 lg:py-36 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none">
-        <LogoIcon size={320} color="#FFFDF9" />
+        <RefinedSpacesLogo variant="icon" className="w-80 h-80" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
@@ -43,8 +43,8 @@ export function FinalCTA() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-linen/50 text-sm">
                   <Send className="w-4 h-4 text-gold shrink-0" strokeWidth={1.5} />
-                  <a href="mailto:hello@refinedspaces.com" className="hover:text-gold transition-colors">
-                    hello@refinedspaces.com
+                  <a href="mailto:jdjonfelix@gmail.com" className="hover:text-gold transition-colors">
+                    jdjonfelix@gmail.com
                   </a>
                 </div>
                 <p className="text-linen/35 text-xs leading-relaxed pl-7">

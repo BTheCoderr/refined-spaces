@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { HERO } from '../../constants/content'
 import { Button } from '../ui/Button'
-import { LogoIcon } from '../ui/Logo'
+import { RefinedSpacesLogo } from '../brand/RefinedSpacesLogo'
 
 export function Hero() {
   return (
@@ -22,7 +22,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.15, ease: 'easeOut' }}
           className="flex justify-center mb-10"
         >
-          <LogoIcon size={56} className="md:w-[72px] md:h-[90px]" />
+          <RefinedSpacesLogo variant="icon" className="w-16 h-16 md:w-20 md:h-20" />
         </motion.div>
 
         <motion.span
