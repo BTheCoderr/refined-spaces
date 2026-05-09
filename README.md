@@ -4,7 +4,7 @@ Boutique-hotel-level property management in Providence, Rhode Island. Curated st
 
 **Live site:** [refinedspaces.netlify.app](https://refinedspaces.netlify.app/)
 
-**Public inquiries:** **werefinedspaces@gmail.com** (also in `src/constants/content.js`)
+**Public inquiries:** **werefinespaces@gmail.com** (also in `src/constants/content.js`)
 
 ---
 
@@ -51,7 +51,13 @@ Publish directory: `dist`
 - **Icons:** Lucide React
 - **Forms:** Netlify Forms (with mailto fallback)
 
-Secrets (not committed): copy `.env.example` to `.env` and add `RESEND_API_KEY` for transactional email backends.
+Secrets (not committed): copy `.env.example` to `.env` for local `netlify dev`. In **Netlify → Site settings → Environment variables**, add:
+
+- **`RESEND_API_KEY`** — API key from Resend (rotate if ever exposed)
+- **`RESEND_TO_EMAIL`** — **`werefinespaces@gmail.com`**
+- **`RESEND_FROM_EMAIL`** — **`Refined Spaces <onboarding@resend.dev>`** (or your verified domain sender)
+
+Inquiries are captured in **Netlify Forms** first; a serverless function **`contact-email`** sends a Resend notification after a successful form POST. The API key is never sent to the browser.
 
 ## Brand System
 

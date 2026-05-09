@@ -5,6 +5,25 @@ import { AnimateOnScroll } from '../ui/AnimateOnScroll'
 import { RefinedSpacesLogo } from '../brand/RefinedSpacesLogo'
 import { Send, CheckCircle } from 'lucide-react'
 
+async function sendNotificationEmail(fd) {
+  const payload = {
+    name: String(fd.get('name') ?? '').trim(),
+    email: String(fd.get('email') ?? '').trim(),
+    interest: String(fd.get('interest') ?? '').trim(),
+    message: String(fd.get('message') ?? '').trim(),
+  }
+  try {
+    const response = await fetch('/.netlify/functions/contact-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+    if (!response.ok) console.warn('Notification email could not be sent.')
+  } catch {
+    console.warn('Notification email could not be sent.')
+  }
+}
+
 export function FinalCTA() {
   const [submitted, setSubmitted] = useState(false)
 
@@ -18,7 +37,11 @@ export function FinalCTA() {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(data).toString(),
     })
-      .then(() => setSubmitted(true))
+      .then(async (response) => {
+        if (!response.ok) throw new Error('Form submission failed')
+        setSubmitted(true)
+        await sendNotificationEmail(data)
+      })
       .catch(() => {
         window.location.href = `mailto:${FOOTER.contact.email}?subject=${encodeURIComponent('Inquiry from ' + data.get('name'))}&body=${encodeURIComponent(data.get('message'))}`
       })
