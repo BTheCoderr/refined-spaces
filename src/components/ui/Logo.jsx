@@ -102,7 +102,7 @@ export function LogoHorizontal({ on = 'dark', iconSize = 36, className = '' }) {
   const tagColor = on === 'dark' ? 'rgba(255,253,249,0.4)' : 'rgba(14,30,45,0.45)'
 
   return (
-    <a href="#" className={`inline-flex items-center gap-3.5 group ${className}`}>
+    <a href="#top" className={`inline-flex items-center gap-3.5 group ${className}`}>
       <ArchMark size={iconSize} color={markColor} />
       <div className="flex flex-col gap-1.5">
         <Wordmark color={textColor} className="text-base" />
@@ -121,7 +121,7 @@ export function LogoCompact({ on = 'dark', iconSize = 28, className = '' }) {
   const textColor = on === 'dark' ? COLORS.ivory : COLORS.navy
 
   return (
-    <a href="#" className={`inline-flex items-center gap-2.5 group ${className}`}>
+    <a href="#top" className={`inline-flex items-center gap-2.5 group ${className}`}>
       <ArchMark size={iconSize} color={markColor} />
       <Wordmark color={textColor} className="text-sm" />
     </a>

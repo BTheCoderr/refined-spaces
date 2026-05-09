@@ -3,7 +3,7 @@ import { FINAL_CTA, FOOTER } from '../../constants/content'
 import { Button } from '../ui/Button'
 import { AnimateOnScroll } from '../ui/AnimateOnScroll'
 import { RefinedSpacesLogo } from '../brand/RefinedSpacesLogo'
-import { Send, CheckCircle } from 'lucide-react'
+import { Send, Phone, CheckCircle } from 'lucide-react'
 
 async function sendNotificationEmail(fd) {
   const payload = {
@@ -64,6 +64,15 @@ export function FinalCTA() {
                 {FINAL_CTA.subheadline}
               </p>
               <div className="space-y-4">
+                <div className="flex items-center gap-3 text-linen/50 text-sm">
+                  <Phone className="w-4 h-4 text-gold shrink-0" strokeWidth={1.5} />
+                  <a
+                    href={`tel:${FOOTER.contact.phoneTel}`}
+                    className="hover:text-gold transition-colors"
+                  >
+                    {FOOTER.contact.phone}
+                  </a>
+                </div>
                 <div className="flex items-center gap-3 text-linen/50 text-sm">
                   <Send className="w-4 h-4 text-gold shrink-0" strokeWidth={1.5} />
                   <a href={`mailto:${FOOTER.contact.email}`} className="hover:text-gold transition-colors">

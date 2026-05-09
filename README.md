@@ -4,7 +4,7 @@ Boutique-hotel-level property management in Providence, Rhode Island. Curated st
 
 **Live site:** [refinedspaces.netlify.app](https://refinedspaces.netlify.app/)
 
-**Public inquiries:** **werefinespaces@gmail.com** (also in `src/constants/content.js`)
+**Public inquiries:** **werefinespaces@gmail.com** · **[(401) 952-7897](tel:+14019527897)** (also in `src/constants/content.js`)
 
 ---
 

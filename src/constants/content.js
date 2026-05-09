@@ -198,9 +198,8 @@ export const FOOTER = {
   ],
   contact: {
     email: 'werefinespaces@gmail.com',
+    phone: '(401) 952-7897',
+    phoneTel: '+14019527897',
   },
-  legal: [
-    { label: 'Privacy Policy' },
-    { label: 'Terms of Service' },
-  ],
+  legal: [],
 }

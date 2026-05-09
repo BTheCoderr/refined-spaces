@@ -12,7 +12,7 @@ import { BackToTop } from './components/ui/BackToTop'
 
 export default function App() {
   return (
-    <div className="min-h-screen">
+    <div id="top" className="min-h-screen">
       <Navbar />
       <main>
         <Hero />
