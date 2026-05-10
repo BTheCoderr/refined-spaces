@@ -41,19 +41,19 @@ export const HERO = {
   secondaryCta: 'Explore the Guest Experience',
   mosaic: [
     {
-      url: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1200&q=80',
+      url: '/images/hero/skyline-dusk.jpg',
       alt: 'Urban skyline from above at dusk—city lights and downtown energy',
     },
     {
-      url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80',
+      url: '/images/hero/coastal-atlantic.jpg',
       alt: 'Sunlit Atlantic coastline—sandy shore and turquoise surf',
     },
     {
-      url: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=1200&q=80',
+      url: '/images/hero/luxury-pool.jpg',
       alt: 'Sparkling infinity pool reflecting sky—with open water views beyond',
     },
     {
-      url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
+      url: '/images/hero/residence-golden-hour.jpg',
       alt: 'Luxury residence exterior at golden hour with illuminated windows',
     },
   ],

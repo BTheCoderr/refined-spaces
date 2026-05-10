@@ -9,13 +9,13 @@ export function RhodeIsland() {
       className="relative scroll-mt-24 lg:scroll-mt-[5.25rem] py-24 md:py-32 lg:py-40 overflow-hidden"
     >
       <img
-        src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1920&q=85"
+        src="/images/hero/skyline-dusk.jpg"
         alt="Urban skyline above the Providence riverfront—city lights reflecting on the water at dusk"
         className="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
       />
       <img
-        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=960&q=80"
+        src="/images/hero/coastal-atlantic.jpg"
         alt="Atlantic shoreline and Rhode Island coastal waters—sunset hues over the shore"
         className="absolute inset-0 w-full h-full object-cover opacity-38 mix-blend-overlay"
         loading="lazy"
