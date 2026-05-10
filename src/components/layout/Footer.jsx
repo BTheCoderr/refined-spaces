@@ -67,7 +67,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-sm font-medium text-gold/90 hover:text-gold underline-offset-4 hover:underline transition-colors duration-300"
                 >
-                  Book a Stay
+                  {FOOTER.externalListingsLinkLabel}
                 </a>
               </li>
             </ul>

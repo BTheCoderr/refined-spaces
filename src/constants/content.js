@@ -23,11 +23,6 @@ export const FOOTER_NAV_LINKS = [
   { label: 'For Owners', href: '#for-owners' },
   { label: 'About Rhode Island', href: '#about-rhode-island' },
   { label: 'Our Process', href: '#process' },
-  {
-    label: 'Book a Stay',
-    href: 'https://www.airbnb.com/users/profile/1577609734256632821?previous_page_name=PdpHomeMarketplace',
-    external: true,
-  },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -268,6 +263,8 @@ export const FOOTER = {
   location: 'Rhode Island',
   externalBookStayHref:
     'https://www.airbnb.com/users/profile/1577609734256632821?previous_page_name=PdpHomeMarketplace',
+  /** Visible label for the Airbnb portfolio link */
+  externalListingsLinkLabel: 'Explore on Airbnb',
   contact: {
     company: 'Refined Spaces',
     email: 'werefinespaces@gmail.com',
