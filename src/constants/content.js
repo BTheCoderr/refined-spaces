@@ -3,6 +3,7 @@ export const NAV_LINKS = [
   { label: 'Guest Experience', href: '#guests' },
   { label: 'Our Process', href: '#process' },
   { label: 'About Providence', href: '#providence' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export const HERO = {
@@ -185,6 +186,8 @@ export const FINAL_CTA = {
   headline: 'Contact the Refined Spaces Team',
   subheadline:
     'Whether you own a Providence property or are planning your next Rhode Island stay, our team is here to help. Share a few details and we will follow up.',
+  primaryCta: 'Start a Conversation',
+  secondaryCta: 'Learn More About Our Services',
 }
 
 export const FOOTER = {
@@ -195,6 +198,7 @@ export const FOOTER = {
     { label: 'Guest Experience', href: '#guests' },
     { label: 'Our Process', href: '#process' },
     { label: 'About Providence', href: '#providence' },
+    { label: 'Contact', href: '#contact' },
   ],
   contact: {
     company: 'Refined Spaces',

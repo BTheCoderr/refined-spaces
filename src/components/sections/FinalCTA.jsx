@@ -48,14 +48,17 @@ export function FinalCTA() {
   }
 
   return (
-    <section id="contact" className="bg-navy py-24 md:py-32 lg:py-36 relative overflow-hidden">
+    <section
+      id="contact"
+      className="scroll-mt-24 lg:scroll-mt-[5.25rem] bg-navy py-24 md:py-32 lg:py-36 relative overflow-hidden"
+    >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none">
         <RefinedSpacesLogo variant="icon" className="w-80 h-80" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-start">
-          <AnimateOnScroll>
+          <AnimateOnScroll className="order-2 lg:order-1">
             <div>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-ivory mb-6 leading-tight">
                 {FINAL_CTA.headline}
@@ -87,7 +90,7 @@ export function FinalCTA() {
             </div>
           </AnimateOnScroll>
 
-          <AnimateOnScroll delay={0.15}>
+          <AnimateOnScroll delay={0.15} className="order-1 lg:order-2">
             {submitted ? (
               <div className="bg-navy-light/50 border border-gold/15 rounded p-10 text-center">
                 <CheckCircle className="w-10 h-10 text-gold mx-auto mb-4" strokeWidth={1.5} />
