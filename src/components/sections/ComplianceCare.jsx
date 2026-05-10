@@ -16,7 +16,7 @@ export function ComplianceCare() {
           <AnimateOnScroll>
             <div>
               <SectionEyebrow>{COMPLIANCE.eyebrowAccent}</SectionEyebrow>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.85rem] font-bold text-navy mb-8 leading-[1.12] tracking-tight">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.85rem] font-extrabold text-navy mb-8 leading-[1.12] tracking-tight">
                 {COMPLIANCE.sectionTitle}
               </h2>
               <p className="font-serif text-2xl text-navy mb-8 font-normal leading-snug">

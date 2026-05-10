@@ -20,7 +20,7 @@ export function GuestExperience() {
         <div className="text-center mb-14 lg:mb-18">
           <AnimateOnScroll>
             {GUEST_EXPERIENCE.eyebrow ? <SectionEyebrow>{GUEST_EXPERIENCE.eyebrow}</SectionEyebrow> : null}
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.85rem] font-bold text-navy mb-6 leading-[1.12] tracking-tight">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.85rem] font-extrabold text-navy mb-6 leading-[1.12] tracking-tight">
               {GUEST_EXPERIENCE.headline}
             </h2>
             <p className="max-w-xl mx-auto text-charcoal/70 text-[15px] md:text-[17px] leading-relaxed font-light tracking-wide">

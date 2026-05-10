@@ -10,7 +10,7 @@ export function Process() {
         <div className="text-center mb-14 lg:mb-18">
           <AnimateOnScroll>
             <SectionEyebrow>{PROCESS.eyebrowAccent}</SectionEyebrow>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.85rem] font-bold text-navy leading-[1.12] mb-6 tracking-tight">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.85rem] font-extrabold text-navy leading-[1.12] mb-6 tracking-tight">
               {PROCESS.sectionTitle}
             </h2>
           </AnimateOnScroll>
