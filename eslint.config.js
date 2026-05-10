@@ -7,6 +7,13 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 export default defineConfig([
   globalIgnores(['dist', '.netlify', 'node_modules']),
   {
+    files: ['netlify/functions/**/*.js'],
+    languageOptions: {
+      globals: globals.node,
+      parserOptions: { ecmaVersion: 2022, sourceType: 'module' },
+    },
+  },
+  {
     files: ['**/*.{js,jsx}'],
     extends: [
       js.configs.recommended,
