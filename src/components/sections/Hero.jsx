@@ -2,13 +2,22 @@ import { motion } from 'framer-motion'
 import { HERO } from '../../constants/content'
 import { Button } from '../ui/Button'
 import { LogoIcon } from '../ui/Logo'
+import { publicAssetUrl } from '../../utils/assetUrl'
 
 export function Hero() {
   return (
     <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 opacity-95">
-        {HERO.mosaic.map((tile) => (
-          <img key={tile.url} src={tile.url} alt={tile.alt} className="w-full h-full object-cover" loading="eager" />
+        {HERO.mosaic.map((tile, i) => (
+          <img
+            key={tile.url}
+            src={publicAssetUrl(tile.url)}
+            alt={tile.alt}
+            className="w-full h-full object-cover min-h-[50%]"
+            loading={i === 0 ? 'eager' : 'lazy'}
+            {...(i === 0 ? { fetchPriority: 'high' } : {})}
+            decoding="async"
+          />
         ))}
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-navy/82 via-navy/68 to-navy/88" />

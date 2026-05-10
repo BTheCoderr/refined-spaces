@@ -1,6 +1,7 @@
 import { RHODE_ISLAND } from '../../constants/content'
 import { SectionEyebrow } from '../ui/SectionEyebrow'
 import { AnimateOnScroll } from '../ui/AnimateOnScroll'
+import { publicAssetUrl } from '../../utils/assetUrl'
 
 export function RhodeIsland() {
   return (
@@ -9,13 +10,13 @@ export function RhodeIsland() {
       className="relative scroll-mt-24 lg:scroll-mt-[5.25rem] py-24 md:py-32 lg:py-40 overflow-hidden"
     >
       <img
-        src="/images/hero/skyline-dusk.jpg"
+        src={publicAssetUrl('/images/hero/skyline-dusk.jpg')}
         alt="Urban skyline above the Providence riverfront—city lights reflecting on the water at dusk"
         className="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
       />
       <img
-        src="/images/hero/coastal-atlantic.jpg"
+        src={publicAssetUrl('/images/hero/coastal-atlantic.jpg')}
         alt="Atlantic shoreline and Rhode Island coastal waters—sunset hues over the shore"
         className="absolute inset-0 w-full h-full object-cover opacity-38 mix-blend-overlay"
         loading="lazy"
