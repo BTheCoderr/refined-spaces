@@ -13,7 +13,7 @@ export function WhoWeAre() {
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 mb-12">
             <LogoMonogram size={56} color="#C5A96A" className="shrink-0" />
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-navy mb-8 leading-[1.12] tracking-tight">
+              <h2 className="font-serif text-3xl md:text-4xl font-extrabold text-navy mb-8 leading-[1.12] tracking-tight">
                 {WHO_WE_ARE.headline}
               </h2>
               <p className="text-charcoal/70 text-[15px] md:text-lg leading-[2] md:leading-relaxed tracking-wide font-light">

@@ -36,10 +36,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] font-bold text-ivory leading-[1.05] mb-8 md:mb-10"
+          className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] font-bold text-ivory leading-[1.02] mb-8 md:mb-10"
         >
           <span className="block tracking-tight">{HERO.headlineLine1}</span>
-          <span className="block tracking-tight mt-1">{HERO.headlineLine2}</span>
+          <span className="block tracking-tight mt-2 sm:mt-3">{HERO.headlineLine2}</span>
         </motion.div>
 
         <motion.p

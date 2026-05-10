@@ -16,7 +16,7 @@ export function TrustValue() {
         <div className="text-center mb-14 lg:mb-18">
           <AnimateOnScroll>
             {TRUST.eyebrow ? <SectionEyebrow>{TRUST.eyebrow}</SectionEyebrow> : null}
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.85rem] font-bold text-navy mb-6 md:mb-8 leading-[1.12] tracking-tight">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.85rem] font-extrabold text-navy mb-6 md:mb-8 leading-[1.12] tracking-tight">
               {TRUST.headline}
             </h2>
             <p className="max-w-2xl mx-auto text-charcoal/70 text-[15px] md:text-[17px] leading-relaxed font-light tracking-wide">

@@ -38,7 +38,7 @@ export function GuestExperience() {
                   <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-gold/35 flex items-center justify-center transition-all duration-400 group-hover:bg-gold/8 group-hover:border-gold/55 group-hover:shadow-[0_0_20px_rgba(197,169,106,0.12)]">
                     <Icon className="w-6 h-6 text-gold" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-serif text-lg font-semibold text-navy mb-3">
+                  <h3 className="font-serif text-lg font-bold text-navy mb-3">
                     {pillar.title}
                   </h3>
                   <p className="text-[13px] md:text-sm text-charcoal/60 leading-[1.8] px-2">

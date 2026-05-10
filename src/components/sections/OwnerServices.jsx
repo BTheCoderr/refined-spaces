@@ -37,7 +37,7 @@ export function OwnerServices() {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center mb-14 lg:mb-18">
           <AnimateOnScroll>
-            <SectionEyebrow>{OWNER_SERVICES.eyebrow}</SectionEyebrow>
+            {OWNER_SERVICES.eyebrow ? <SectionEyebrow>{OWNER_SERVICES.eyebrow}</SectionEyebrow> : null}
             <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.85rem] font-bold text-ivory mb-6 md:mb-8 leading-[1.12] tracking-tight">
               {OWNER_SERVICES.headline}
             </h2>

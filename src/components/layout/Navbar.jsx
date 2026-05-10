@@ -85,24 +85,37 @@ export function Navbar() {
                   onMouseEnter={() => setDesktopWhoOpen(true)}
                   onMouseLeave={() => setDesktopWhoOpen(false)}
                 >
-                  <button
-                    type="button"
-                    className={`inline-flex items-center gap-1 relative text-[12px] text-ivory/75 hover:text-ivory transition-colors duration-300 tracking-wider uppercase ${
-                      desktopWhoOpen ? 'text-ivory' : ''
-                    }`}
-                    aria-expanded={desktopWhoOpen}
-                    aria-haspopup="menu"
-                    id="who-are-we-trigger"
-                    onClick={() => setDesktopWhoOpen((o) => !o)}
-                  >
-                    {item.label}
-                    <ChevronDown
-                      className={`w-[14px] h-[14px] opacity-70 transition-transform duration-300 ${
-                        desktopWhoOpen ? 'rotate-180' : ''
+                  <div className="relative inline-flex items-center gap-1">
+                    <a
+                      href="#who-we-are"
+                      className={`relative text-[12px] hover:text-ivory transition-colors duration-300 tracking-wider uppercase ${
+                        desktopWhoOpen ? 'text-ivory' : 'text-ivory/75'
                       }`}
-                      aria-hidden
-                    />
-                  </button>
+                    >
+                      {item.label}
+                    </a>
+                    <button
+                      type="button"
+                      className={`inline-flex items-center p-0.5 -mr-0.5 text-ivory/75 hover:text-ivory transition-colors duration-300 ${
+                        desktopWhoOpen ? 'text-ivory' : ''
+                      }`}
+                      aria-expanded={desktopWhoOpen}
+                      aria-haspopup="menu"
+                      id="who-are-we-trigger"
+                      aria-label={`${item.label} submenu`}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        setDesktopWhoOpen((o) => !o)
+                      }}
+                    >
+                      <ChevronDown
+                        className={`w-[14px] h-[14px] opacity-70 transition-transform duration-300 ${
+                          desktopWhoOpen ? 'rotate-180' : ''
+                        }`}
+                        aria-hidden
+                      />
+                    </button>
+                  </div>
                   <AnimatePresence>
                     {desktopWhoOpen && (
                       <motion.div
@@ -132,7 +145,7 @@ export function Navbar() {
                   </AnimatePresence>
                   <span
                     aria-hidden
-                    className={`absolute bottom-[-6px] left-0 right-0 h-px bg-gold scale-x-0 transition-transform duration-300 origin-left ${
+                    className={`absolute bottom-[-6px] left-0 right-0 h-px bg-gold scale-x-0 transition-transform duration-300 origin-center ${
                       desktopWhoOpen ? 'scale-x-100' : ''
                     } group-hover/nav:scale-x-100`}
                   />
@@ -186,15 +199,27 @@ export function Navbar() {
             <div className="px-6 py-10 flex flex-col gap-0">
               {HEADER_NAV.map((item, i) =>
                 item.children ? (
-                  <div key={`nav-drawer-parent-${item.label}`} className="border-b border-ivory/5">
-                    <button
-                      type="button"
-                      onClick={() => setMobileWhoOpen(!mobileWhoOpen)}
-                      className="w-full text-left py-4 text-lg text-ivory/70 uppercase tracking-wider flex items-center justify-between"
-                    >
-                      {item.label}
-                      <ChevronDown className={`w-5 h-5 transition-transform shrink-0 ${mobileWhoOpen ? 'rotate-180' : ''}`} />
-                    </button>
+                  <div key={`nav-drawer-parent-${item.label}`}>
+                    <div className="flex items-stretch border-b border-ivory/5">
+                      <a
+                        href="#who-we-are"
+                        onClick={(e) => scrollToMobileSection(e, '#who-we-are')}
+                        className="flex-1 min-w-0 py-4 text-lg text-ivory/70 uppercase tracking-wider hover:text-gold transition-colors pr-4"
+                      >
+                        {item.label}
+                      </a>
+                      <button
+                        type="button"
+                        aria-expanded={mobileWhoOpen}
+                        aria-label={`${item.label} submenu`}
+                        className="shrink-0 py-4 pl-2 pr-2 text-ivory/55 hover:text-ivory transition-colors flex items-center"
+                        onClick={() => setMobileWhoOpen(!mobileWhoOpen)}
+                      >
+                        <ChevronDown
+                          className={`w-5 h-5 transition-transform shrink-0 ${mobileWhoOpen ? 'rotate-180' : ''}`}
+                        />
+                      </button>
+                    </div>
                     <AnimatePresence initial={false}>
                       {mobileWhoOpen && (
                         <motion.div

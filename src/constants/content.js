@@ -6,7 +6,6 @@ export const HEADER_NAV = [
     label: 'Who Are We',
     href: '#who-we-are',
     children: [
-      { label: 'Our Story', href: '#who-we-are' },
       { label: 'Why Refined Spaces', href: '#why-refined-spaces' },
       { label: 'The Guest Experience', href: '#guest-experience' },
       { label: 'Compliance & Care', href: '#compliance-care' },
@@ -37,25 +36,25 @@ export const HERO = {
   headlineLine1: 'Curated Stays',
   headlineLine2: 'Elevated Experiences',
   subheadline:
-    'Premium Rhode Island residences, luxury short-term stays, and professionalized property management—delivered with high-end hospitality and exacting operational standards.',
+    'Premium luxury homes and short-term stays across Rhode Island—with full-service, professional management, high-end hospitality, and meticulous standards from Newport to Narragansett, Providence to the coast.',
   primaryCta: 'Partner With Us',
   secondaryCta: 'Explore the Guest Experience',
   mosaic: [
     {
-      url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
-      alt: 'Striking modern home exterior at dusk with warm interior lighting',
+      url: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1200&q=80',
+      alt: 'Urban skyline from above at dusk—city lights and downtown energy',
     },
     {
-      url: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1200&q=80',
-      alt: 'Bright open-plan living space with layered lighting and curated furnishings',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1613977256640-cb1b6d8d2d76?w=1200&q=80',
-      alt: 'Ocean horizon and shoreline at golden hour',
+      url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80',
+      alt: 'Sunlit Atlantic coastline—sandy shore and turquoise surf',
     },
     {
       url: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=1200&q=80',
-      alt: 'Resort-quality swimming pool reflecting sky and palms',
+      alt: 'Sparkling infinity pool reflecting sky—with open water views beyond',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
+      alt: 'Luxury residence exterior at golden hour with illuminated windows',
     },
   ],
 }
@@ -63,14 +62,14 @@ export const HERO = {
 export const WHO_WE_ARE = {
   headline: 'Who Are We',
   body:
-    "Refined Spaces was born at the intersection of Ivy League heritage and the new era of global hospitality. As Rhode Island shifts toward professionalized standards, we identified a critical gap: properties with immense potential were being held back by average management. We don't just host — we curate elite real estate assets that represent the best of our communities across the state.",
+    "Refined Spaces was born at the intersection of Ivy League heritage and the new era of global hospitality. As the Rhode Island market shifts toward professionalized standards, we identified a critical gap: properties with immense potential were being held back by average management. We don't just host — we curate elite real estate assets that represent the best of our community.",
 }
 
 export const TRUST = {
   eyebrow: '',
   headline: 'Why Refined Spaces?',
   body:
-    "We combine hands-on hospitality expertise with meticulous operational care to protect your property's reputation — helping it perform at its best while being cared for at every step.",
+    'We combined our hands-on hospitality expertise with meticulous operational care to ensure quality reputation — so your property performs at its best while being protected at every step.',
   cards: [
     {
       title: 'Protected Investment',
@@ -94,7 +93,7 @@ export const TRUST = {
 }
 
 export const OWNER_SERVICES = {
-  eyebrow: 'Owner Services',
+  eyebrow: '',
   headline: 'Full-Service Management',
   body:
     'Refined Spaces is a net positive to everyone we partner with — full-service management rooted in Rhode Island, built around your success.',
@@ -108,55 +107,55 @@ export const OWNER_SERVICES = {
     {
       title: 'Guest Communication',
       description:
-        'We manage guest communication with timely, professional responses, guiding inquiries to bookings and five-star experiences.',
+        'We manage all guest communication in timely, professional responses, guiding inquiries to bookings and five-star experiences.',
       icon: 'MessageCircle',
     },
     {
       title: 'Pricing & Availability',
       description:
-        'Strategic pricing and availability management designed to maximize revenue, occupancy, and overall listing performance.',
+        'Strategic pricing and availability management designed to maximize your revenue, occupancy, and overall listing performance.',
       icon: 'LineChart',
     },
     {
       title: 'Booking Coordination',
       description:
-        'We handle booking inquiries promptly — screening guests and managing requests to keep your calendar full and protected.',
+        'We handle all booking inquiries promptly — screening guests and managing requests to keep your calendar full and protected.',
       icon: 'CalendarCheck',
     },
     {
       title: 'Cleaning',
       description:
-        'Our team delivers consistent, detail-oriented turnovers, ensuring every property is spotless and guest-ready.',
+        'Our in-house team delivers consistent, detail-oriented turnovers, ensuring every property is spotless and guest-ready.',
       icon: 'Sparkles',
     },
     {
-      title: 'Onsite Guest Support',
+      title: 'Onsite guest support',
       description:
-        'On-ground support from check-in through checkout — we resolve issues so each stay unfolds without friction.',
+        'On-ground support from check-in to checkout — we handle guest needs and resolve issues so every stay runs smoothly.',
       icon: 'HeadphonesIcon',
     },
     {
-      title: 'Listing Photography',
+      title: 'Listing photography',
       description:
-        "High-caliber photography showcases your residence's standout features — elevating bookings and reinforcing premium positioning.",
+        "High-quality photography that highlights your property's best features, capturing attention and increasing booking conversion.",
       icon: 'Camera',
     },
     {
-      title: 'Interior Design & Styling',
+      title: 'Interior design & styling',
       description:
-        'We style environments with intentional warmth and polish so guests linger, remember, and return.',
+        'We style with intention while creating inviting, memorable environments that enhance guest experience and drive great performance.',
       icon: 'Palette',
     },
     {
       title: 'Maintenance Coordination',
       description:
-        "Proactive care and decisive response safeguard your residence and elevate every visitor's perception.",
+        "Proactive property care and rapid response to protect your home and your guests' experience.",
       icon: 'Wrench',
     },
     {
       title: 'Compliance Guidance',
       description:
-        "Navigate Rhode Island's short-term rental landscape with assurance. Our team stays fluent in regulation so yours remains protected.",
+        "Navigate Rhode Island's short-term rental landscape with confidence. We stay informed so you stay protected.",
       icon: 'FileCheck',
     },
   ],
@@ -166,7 +165,7 @@ export const GUEST_EXPERIENCE = {
   eyebrow: '',
   headline: 'The Guest Experience',
   body:
-    'From reservation to farewell, journeys are stitched together with choreography more common to boutique hotels than standard listings.',
+    'Every stay blends privacy and discretion with the warmth of a dedicated host—from arrival through departure—tailored for premium residences across Rhode Island.',
   pillars: [
     {
       title: 'Seamless Arrival',
@@ -199,9 +198,9 @@ export const RHODE_ISLAND = {
   eyebrow: 'About Rhode Island',
   headline: 'Rooted in Rhode Island',
   body:
-    'From storied harbors and Atlantic coastlines to design-forward urban residences, Rhode Island offers a tapestry of locales defined by discerning taste. We curate narratives that amplify each distinctive setting — illuminating architecture, artistry, terroir, and the spirited communities that elevate every stay.',
+    'Across the Ocean State—from iconic Newport harbors and South County beaches to Providence’s civic energy and the quiet bays of Narragansett Bay—Rhode Island delivers breadth without sacrificing depth. We curate narratives that elevate each destination: architecture and craft, shoreline and skyline, culinary identity, and neighborhoods that invite discovery.',
   secondaryBody:
-    'Whether commanding panoramic bay views near Newport, presiding above Providence’s skyline, or inviting guests toward quiet coastal escapes, we illuminate the virtues of Rhode Island’s full geography — thoughtfully, memorably, and at the level your asset warrants.',
+    'Your property joins a statewide portfolio presented with intention. We showcase every region with the same meticulous standard whether the backdrop is marina views, collegiate heritage, lighthouse coasts, gallery districts, or unhurried seasonal retreats—honoring Rhode Island end to end, not through a single city lens.',
 }
 
 export const COMPLIANCE = {
