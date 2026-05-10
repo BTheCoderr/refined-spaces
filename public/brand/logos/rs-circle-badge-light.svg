@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+<title id="title">Refined Spaces Logo</title>
+<desc id="desc">Luxury hospitality logo for Refined Spaces featuring an architectural arched emblem and R monogram.</desc>
+<rect width="1024" height="1024" fill="#F5F0E8"/>
+<circle cx="512" cy="512" r="420" fill="none" stroke="#C5A96A" stroke-width="8"/>
+<circle cx="512" cy="512" r="372" fill="none" stroke="#C5A96A" stroke-width="3" opacity="0.75"/>
+<circle cx="512" cy="512" r="260" fill="none" stroke="#C5A96A" stroke-width="2" opacity="0.35"/>
+<path id="topArc" d="M 158 512 A 354 354 0 0 1 866 512" fill="none"/>
+<path id="bottomArc" d="M 866 512 A 354 354 0 0 1 158 512" fill="none"/>
+<text font-family="Cormorant Garamond, Playfair Display, Libre Baskerville, Georgia, 'Times New Roman', serif" font-size="58" fill="#2E3A3F" letter-spacing="0.18em">
+  <textPath href="#topArc" startOffset="50%" text-anchor="middle">REFINED SPACES</textPath>
+</text>
+<text font-family="DM Sans, Jost, Raleway, Arial, sans-serif" font-size="30" fill="#2E3A3F" letter-spacing="0.20em">
+  <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">CURATED STAYS. ELEVATED EXPERIENCES.</textPath>
+</text>
+<circle cx="145" cy="512" r="10" fill="#C5A96A"/>
+<circle cx="879" cy="512" r="10" fill="#C5A96A"/>
+
+<g transform="translate(310 235) scale(0.79)" stroke="#C5A96A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M 148 398 L 148 175 A 108 108 0 0 1 364 175 L 364 398" fill="none"/>
+  <path d="M 170 386 L 170 178 A 86 86 0 0 1 342 178 L 342 386" fill="none" opacity="0.72"/>
+  <path d="M128 394 L128 174 M140 394 L140 174 M120 394 H151 M120 174 H151" fill="none"/>
+  <path d="M384 394 L384 174 M372 394 L372 174 M361 394 H392 M361 174 H392" fill="none"/>
+  
+<path d="M112 408 H400 M126 424 H386" fill="none"/>
+<path d="M188 398 H324" fill="none"/>
+
+  <path d="M245 55 L267 55 L274 93 L238 93 Z" fill="none"/>
+  
+<path d="M174 178 H338" fill="none"/>
+<line x1="256.00" y1="178.00" x2="332.08" y2="153.28" stroke="#C5A96A" stroke-width="3" stroke-linecap="round"/>
+<line x1="256.00" y1="178.00" x2="320.72" y2="130.98" stroke="#C5A96A" stroke-width="3" stroke-linecap="round"/>
+<line x1="256.00" y1="178.00" x2="303.02" y2="113.28" stroke="#C5A96A" stroke-width="3" stroke-linecap="round"/>
+<line x1="256.00" y1="178.00" x2="280.72" y2="101.92" stroke="#C5A96A" stroke-width="3" stroke-linecap="round"/>
+<line x1="256.00" y1="178.00" x2="256.00" y2="98.00" stroke="#C5A96A" stroke-width="3" stroke-linecap="round"/>
+<line x1="256.00" y1="178.00" x2="231.28" y2="101.92" stroke="#C5A96A" stroke-width="3" stroke-linecap="round"/>
+<line x1="256.00" y1="178.00" x2="208.98" y2="113.28" stroke="#C5A96A" stroke-width="3" stroke-linecap="round"/>
+<line x1="256.00" y1="178.00" x2="191.28" y2="130.98" stroke="#C5A96A" stroke-width="3" stroke-linecap="round"/>
+<line x1="256.00" y1="178.00" x2="179.92" y2="153.28" stroke="#C5A96A" stroke-width="3" stroke-linecap="round"/>
+
+  <text x="256" y="333" text-anchor="middle" fill="#C5A96A" stroke="none" font-family="Cormorant Garamond, Playfair Display, Libre Baskerville, Georgia, 'Times New Roman', serif" font-size="190" font-weight="400">R</text>
+  <g stroke="#C5A96A"></g>
+</g>
+</svg>
