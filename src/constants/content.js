@@ -41,20 +41,20 @@ export const HERO = {
   secondaryCta: 'Explore the Guest Experience',
   mosaic: [
     {
-      url: '/images/hero/skyline-dusk.jpg',
-      alt: 'Urban skyline from above at dusk—city lights and downtown energy',
+      url: '/images/hero/providence-overhead.jpg',
+      alt: 'Providence, Rhode Island skyline from above at dusk',
     },
     {
-      url: '/images/hero/coastal-atlantic.jpg',
-      alt: 'Sunlit Atlantic coastline—sandy shore and turquoise surf',
+      url: '/images/hero/newport-beach.jpg',
+      alt: 'Newport, Rhode Island coastline and Atlantic shoreline',
     },
     {
       url: '/images/hero/luxury-pool.jpg',
-      alt: 'Sparkling infinity pool reflecting sky—with open water views beyond',
+      alt: 'Sparkling infinity pool with open-water views',
     },
     {
-      url: '/images/hero/residence-golden-hour.jpg',
-      alt: 'Luxury residence exterior at golden hour with illuminated windows',
+      url: '/images/hero/golden-hour-exterior.jpg',
+      alt: 'Luxury residence exterior at golden hour with warm illuminated windows',
     },
   ],
 }
@@ -69,7 +69,7 @@ export const TRUST = {
   eyebrow: '',
   headline: 'Why Refined Spaces?',
   body:
-    'We combined our hands-on hospitality expertise with meticulous operational care to ensure quality reputation — so your property performs at its best while being protected at every step.',
+    "We combine hands-on hospitality expertise with meticulous operational care to protect your property's reputation, helping it perform at its best while being cared for at every step.",
   cards: [
     {
       title: 'Protected Investment',

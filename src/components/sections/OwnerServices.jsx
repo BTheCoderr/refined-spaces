@@ -14,6 +14,7 @@ import { OWNER_SERVICES } from '../../constants/content'
 import { SectionEyebrow } from '../ui/SectionEyebrow'
 import { Card } from '../ui/Card'
 import { AnimateOnScroll } from '../ui/AnimateOnScroll'
+import { publicAssetUrl } from '../../utils/assetUrl'
 
 const iconMap = {
   ClipboardList,
@@ -32,9 +33,17 @@ export function OwnerServices() {
   return (
     <section
       id="for-owners"
-      className="scroll-mt-24 lg:scroll-mt-[5.25rem] bg-navy py-24 md:py-32 lg:py-36"
+      className="scroll-mt-24 lg:scroll-mt-[5.25rem] relative py-24 md:py-32 lg:py-36 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <img
+        src={publicAssetUrl('/images/hero/open-living-room.jpg')}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-navy/93" />
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center mb-14 lg:mb-18">
           <AnimateOnScroll>
             {OWNER_SERVICES.eyebrow ? <SectionEyebrow>{OWNER_SERVICES.eyebrow}</SectionEyebrow> : null}

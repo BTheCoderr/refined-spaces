@@ -2,6 +2,7 @@ import { DoorOpen, Gem, MapPin, Headphones } from 'lucide-react'
 import { GUEST_EXPERIENCE } from '../../constants/content'
 import { SectionEyebrow } from '../ui/SectionEyebrow'
 import { AnimateOnScroll } from '../ui/AnimateOnScroll'
+import { publicAssetUrl } from '../../utils/assetUrl'
 
 const iconMap = {
   DoorOpen,
@@ -14,9 +15,17 @@ export function GuestExperience() {
   return (
     <section
       id="guest-experience"
-      className="scroll-mt-24 lg:scroll-mt-[5.25rem] bg-cream py-24 md:py-32 lg:py-36"
+      className="scroll-mt-24 lg:scroll-mt-[5.25rem] relative py-24 md:py-32 lg:py-36 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <img
+        src={publicAssetUrl('/images/hero/patio-firepit.jpg')}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-cream/92" />
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center mb-14 lg:mb-18">
           <AnimateOnScroll>
             {GUEST_EXPERIENCE.eyebrow ? <SectionEyebrow>{GUEST_EXPERIENCE.eyebrow}</SectionEyebrow> : null}

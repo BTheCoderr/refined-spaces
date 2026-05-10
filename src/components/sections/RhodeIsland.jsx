@@ -10,14 +10,14 @@ export function RhodeIsland() {
       className="relative scroll-mt-24 lg:scroll-mt-[5.25rem] py-24 md:py-32 lg:py-40 overflow-hidden"
     >
       <img
-        src={publicAssetUrl('/images/hero/skyline-dusk.jpg')}
-        alt="Urban skyline above the Providence riverfront—city lights reflecting on the water at dusk"
+        src={publicAssetUrl('/images/hero/rhode-island-coastline.jpg')}
+        alt="Rocky Rhode Island coastline at Beavertail State Park, Jamestown"
         className="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
       />
       <img
-        src={publicAssetUrl('/images/hero/coastal-atlantic.jpg')}
-        alt="Atlantic shoreline and Rhode Island coastal waters—sunset hues over the shore"
+        src={publicAssetUrl('/images/hero/providence-overhead.jpg')}
+        alt="Providence, Rhode Island skyline from the riverfront"
         className="absolute inset-0 w-full h-full object-cover opacity-38 mix-blend-overlay"
         loading="lazy"
         aria-hidden
