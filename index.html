@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refined Spaces | Curated Stays · Elevated Experiences</title>
+    <meta
+      name="description"
+      content="Premium Rhode Island vacation homes and luxury short-term rentals. Refined Spaces delivers elevated hospitality and full-service property management for discerning owners and guests statewide."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  </head>
+  <body class="antialiased">
+    <form name="inquiry" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="inquiry" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="email" />
+      <select name="interest">
+        <option value="property-management">Property Management</option>
+        <option value="guest-experience">Guest Experience</option>
+        <option value="hosting-questions">Hosting Questions</option>
+        <option value="general">General Inquiry</option>
+      </select>
+      <textarea name="message"></textarea>
+    </form>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
