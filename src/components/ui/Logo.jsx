@@ -28,10 +28,63 @@ const SANS = "'DM Sans', system-ui, sans-serif"
 
 /**
  * Icon-only RS monogram. Reproduces Concept 2's interlocking serif "R" and "S"
- * by overlapping two serif glyphs with negative kerning. No circle, no frame —
- * use LogoCircleBadge when the bordered version is needed.
+ * by overlapping two serif glyphs with negative kerning.
+ *
+ * Pass `framed` to wrap the monogram in a thin open-corner architectural frame
+ * (eight champagne-gold corner ticks, no continuous border).
  */
-export function LogoIcon({ size = 40, color = COLORS.gold, className = '', title = 'Refined Spaces' }) {
+export function LogoIcon({ size = 40, color = COLORS.gold, framed = false, className = '', title = 'Refined Spaces' }) {
+  if (framed) {
+    const w = size
+    const h = size
+    return (
+      <svg
+        viewBox="0 0 148 140"
+        width={w}
+        height={h}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className={className}
+        role="img"
+        aria-label={title}
+      >
+        <g
+          stroke={color}
+          strokeWidth="1.25"
+          strokeLinecap="round"
+          fill="none"
+        >
+          <path d="M6 30 V6 H30" />
+          <path d="M118 6 H142 V30" />
+          <path d="M142 110 V134 H118" />
+          <path d="M30 134 H6 V110" />
+        </g>
+        <text
+          x="21"
+          y="108"
+          fill={color}
+          fontFamily={SERIF}
+          fontSize="118"
+          fontWeight="500"
+          letterSpacing="-14"
+        >
+          R
+        </text>
+        <text
+          x="65"
+          y="108"
+          fill={color}
+          fontFamily={SERIF}
+          fontSize="118"
+          fontWeight="500"
+          letterSpacing="-14"
+        >
+          S
+        </text>
+      </svg>
+    )
+  }
+
   const w = size
   const h = size * 0.95
   return (
@@ -215,13 +268,13 @@ export function LogoStacked({ on = 'dark', iconSize = 64, className = '', showLo
 /**
  * Compact navbar lockup: icon + wordmark, single line.
  */
-export function LogoCompact({ on = 'dark', iconSize = 32, className = '', href = '#top', onClick }) {
+export function LogoCompact({ on = 'dark', iconSize = 32, iconFramed = false, className = '', href = '#top', onClick }) {
   const markColor = COLORS.gold
   const textColor = on === 'dark' ? COLORS.ivory : COLORS.navy
 
   return (
     <a href={href} onClick={onClick} className={`inline-flex items-center gap-3 ${className}`}>
-      <LogoIcon size={iconSize} color={markColor} />
+      <LogoIcon size={iconSize} color={markColor} framed={iconFramed} />
       <Wordmark color={textColor} size="sm" />
     </a>
   )
@@ -293,6 +346,13 @@ export function LogoCircleBadge({
           CURATED STAYS · ELEVATED EXPERIENCES
         </textPath>
       </text>
+
+      <g stroke={ringColor} strokeWidth="1.25" fill="none" strokeLinecap="round">
+        <path d="M80 102 V86 H96" />
+        <path d="M144 86 H160 V102" />
+        <path d="M160 158 V174 H144" />
+        <path d="M96 174 H80 V158" />
+      </g>
 
       <g transform="translate(120 122)">
         <text

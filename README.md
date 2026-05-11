@@ -90,7 +90,7 @@ Inquiries are captured in **Netlify Forms** first; a serverless function **`cont
 The **Modern Gateway** mark — an architectural arch with centered "R" — appears in multiple lockups:
 
 - `LogoCompact` — Navbar (icon + wordmark)
-- `LogoIcon` — Hero, favicon, small placements
+- `LogoIcon` — small placements / favicon source; pass `framed` for the architectural variant
 - `LogoFooter` — Footer (icon + wordmark + tagline + location)
 - `LogoStacked` / `LogoHorizontal` — Available for collateral
 

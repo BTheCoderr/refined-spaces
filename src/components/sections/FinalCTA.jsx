@@ -67,7 +67,7 @@ export function FinalCTA() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <LogoIcon size={44} className="shrink-0" />
+                  <LogoIcon size={48} framed className="shrink-0" />
                   <span aria-hidden className="block h-8 w-px bg-gold/45" />
                   <Wordmark size="md" color="#FFFDF9" />
                 </div>
