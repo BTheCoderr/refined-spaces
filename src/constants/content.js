@@ -31,7 +31,7 @@ export const HERO = {
   headlineLine1: 'Curated Stays',
   headlineLine2: 'Elevated Experiences',
   subheadline:
-    'Premium luxury homes and short-term stays across Rhode Island—with full-service, professional management, high-end hospitality, and meticulous standards from Newport to Narragansett, Providence to the coast.',
+    "Premium homes providing short-term stays across Rhode Island—with full-service, professional management, high-end hospitality, and meticulous standards from the Ocean State's historic and vibrant cities to its coastal destinations.",
   primaryCta: 'Partner With Us',
   secondaryCta: 'Explore the Guest Experience',
   mosaic: [
@@ -56,15 +56,17 @@ export const HERO = {
 
 export const WHO_WE_ARE = {
   headline: 'Who Are We',
-  body:
-    "Refined Spaces was born at the intersection of Ivy League heritage and the new era of global hospitality. As the Rhode Island market shifts toward professionalized standards, we identified a critical gap: properties with immense potential were being held back by average management. We don't just host — we curate elite real estate assets that represent the best of our community.",
+  body: [
+    "Refined Spaces was born at the intersection of Rhode Island's historic character and the new era of global hospitality. As Rhode Island's short-term rental market shifts toward professionalized standards, we identified a critical gap: properties with immense potential were being held back by average management.",
+    'We do more than manage stays — we curate elite real estate assets that represent the quality, character, and hospitality of the communities they represent.',
+  ],
 }
 
 export const TRUST = {
   eyebrow: '',
   headline: 'Why Refined Spaces?',
   body:
-    "We combine hands-on hospitality expertise with meticulous operational care to protect your property's reputation, helping it perform at its best while being cared for at every step.",
+    "We combine hands-on hospitality expertise with thorough operational care to protect your property's reputation, helping it perform at its best while being cared for at every step.",
   cards: [
     {
       title: 'Protected Investment',
@@ -124,19 +126,19 @@ export const OWNER_SERVICES = {
       icon: 'Sparkles',
     },
     {
-      title: 'Onsite guest support',
+      title: 'On Site Guest Support',
       description:
         'On-ground support from check-in to checkout — we handle guest needs and resolve issues so every stay runs smoothly.',
       icon: 'HeadphonesIcon',
     },
     {
-      title: 'Listing photography',
+      title: 'Listing Photography',
       description:
         "High-quality photography that highlights your property's best features, capturing attention and increasing booking conversion.",
       icon: 'Camera',
     },
     {
-      title: 'Interior design & styling',
+      title: 'Interior Design & Styling',
       description:
         'We style with intention while creating inviting, memorable environments that enhance guest experience and drive great performance.',
       icon: 'Palette',
@@ -169,9 +171,9 @@ export const GUEST_EXPERIENCE = {
       icon: 'DoorOpen',
     },
     {
-      title: 'Clean, Curated Spaces',
+      title: 'Immaculate Spaces',
       description:
-        'Meticulously prepared rooms, editorial styling, and hotel-grade housekeeping standards awaiting every arrival.',
+        'Thoughtfully prepared rooms, editorial styling, and hotel-grade housekeeping standards awaiting every arrival.',
       icon: 'Gem',
     },
     {
@@ -193,9 +195,9 @@ export const RHODE_ISLAND = {
   eyebrow: 'About Rhode Island',
   headline: 'Rooted in Rhode Island',
   body:
-    'Across the Ocean State—from iconic Newport harbors and South County beaches to Providence’s civic energy and the quiet bays of Narragansett Bay—Rhode Island delivers breadth without sacrificing depth. We curate narratives that elevate each destination: architecture and craft, shoreline and skyline, culinary identity, and neighborhoods that invite discovery.',
+    'Across the Ocean State — from the iconic harbors of Newport and the beaches of South County to the energy of Providence and the quiet shoreline surrounding Narragansett Bay — Rhode Island offers depth, character, and a distinct sense of place. We provide experiences that highlight the identity of each destination through architecture, coastal living, local culture, culinary discovery, and thoughtfully connected neighborhoods.',
   secondaryBody:
-    'Your property joins a statewide portfolio presented with intention. We showcase every region with the same meticulous standard whether the backdrop is marina views, collegiate heritage, lighthouse coasts, gallery districts, or unhurried seasonal retreats—honoring Rhode Island end to end, not through a single city lens.',
+    'Every property we represent becomes part of a statewide portfolio managed with intention and elevated standards. Whether overlooking a marina, rooted in historic charm, positioned near a university district, or tucked within a quiet coastal retreat, each home is presented with the same commitment to hospitality, professionalism, and the character that defines Rhode Island.',
 }
 
 export const COMPLIANCE = {

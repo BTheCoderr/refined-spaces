@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { HERO } from '../../constants/content'
 import { Button } from '../ui/Button'
-import { LogoIcon } from '../ui/Logo'
+import { LogoHorizontal, LogoStacked } from '../ui/Logo'
 import { publicAssetUrl } from '../../utils/assetUrl'
 
 export function Hero() {
@@ -22,40 +22,26 @@ export function Hero() {
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-navy/82 via-navy/68 to-navy/88" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center pt-24 pb-20">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center pt-28 pb-24">
         <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.15, ease: 'easeOut' }}
-          className="flex justify-center mb-10"
-        >
-          <LogoIcon size={52} />
-        </motion.div>
-
-        <motion.span
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
-          className="inline-block font-accent italic text-gold text-base md:text-lg tracking-[0.22em] mb-6 uppercase"
+          transition={{ duration: 0.9, delay: 0.15, ease: 'easeOut' }}
+          className="flex justify-center mb-12 md:mb-14"
         >
-          {HERO.eyebrow}
-        </motion.span>
-
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] font-bold text-ivory leading-[1.02] mb-8 md:mb-10"
-        >
-          <span className="block tracking-tight">{HERO.headlineLine1}</span>
-          <span className="block tracking-tight mt-2 sm:mt-3">{HERO.headlineLine2}</span>
+          <span className="hidden sm:inline-flex">
+            <LogoHorizontal on="dark" iconSize={86} size="xl" />
+          </span>
+          <span className="sm:hidden">
+            <LogoStacked on="dark" iconSize={72} />
+          </span>
         </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="max-w-2xl mx-auto text-linen/70 text-[15px] md:text-[17px] leading-relaxed mb-12 md:mb-14"
+          transition={{ duration: 0.8, delay: 0.55 }}
+          className="max-w-2xl mx-auto text-linen/75 text-[15px] md:text-[17px] leading-[1.85] mb-12 md:mb-14"
         >
           {HERO.subheadline}
         </motion.p>
@@ -63,7 +49,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.88 }}
+          transition={{ duration: 0.8, delay: 0.78 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Button href="#contact" size="large">

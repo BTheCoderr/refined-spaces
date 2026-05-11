@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { FINAL_CTA, FOOTER } from '../../constants/content'
 import { Button } from '../ui/Button'
 import { AnimateOnScroll } from '../ui/AnimateOnScroll'
-import { LogoIcon, LogoMonogram } from '../ui/Logo'
+import { LogoIcon, Wordmark } from '../ui/Logo'
 import { Send, Phone, CheckCircle } from 'lucide-react'
 
 async function sendNotificationEmail(fd) {
@@ -66,9 +66,10 @@ export function FinalCTA() {
                 {FINAL_CTA.subheadline}
               </p>
               <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <LogoMonogram size={44} color="#C5A96A" className="shrink-0 mt-0.5" />
-                  <p className="font-serif text-xl text-ivory/95 tracking-wide leading-tight pt-1">{FOOTER.contact.company}</p>
+                <div className="flex items-center gap-4">
+                  <LogoIcon size={44} className="shrink-0" />
+                  <span aria-hidden className="block h-8 w-px bg-gold/45" />
+                  <Wordmark size="md" color="#FFFDF9" />
                 </div>
                 <div className="flex items-center gap-3 text-linen/50 text-sm">
                   <Phone className="w-4 h-4 text-gold shrink-0" strokeWidth={1.5} />
@@ -155,7 +156,6 @@ export function FinalCTA() {
                     className="w-full bg-navy/60 border border-ivory/10 rounded px-4 py-3 text-sm text-ivory focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/25 transition-colors appearance-none"
                   >
                     <option value="property-management">Property Management</option>
-                    <option value="guest-experience">Guest Experience</option>
                     <option value="hosting-questions">Hosting Questions</option>
                     <option value="general">General Inquiry</option>
                   </select>
