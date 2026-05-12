@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { HERO } from '../../constants/content'
 import { Button } from '../ui/Button'
-import { LogoHeroHorizontal } from '../ui/Logo'
 import { publicAssetUrl } from '../../utils/assetUrl'
 
 export function Hero() {
@@ -27,9 +26,18 @@ export function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.15, ease: 'easeOut' }}
-          className="flex justify-center w-full mb-12 md:mb-14"
+          className="flex justify-center w-full mb-12 md:mb-14 px-1 sm:px-0"
         >
-          <LogoHeroHorizontal />
+          <img
+            src={publicAssetUrl('/images/logo/refined-spaces-hero-horizontal.png')}
+            alt="Refined Spaces"
+            width={819}
+            height={1024}
+            className="mx-auto block h-auto w-auto max-h-[min(52svh,520px)] max-w-[min(820px,calc(100vw-3rem))] max-[380px]:max-w-[calc(100vw-2rem)] object-contain"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
         </motion.div>
 
         <motion.p
