@@ -26,17 +26,17 @@ export function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.15, ease: 'easeOut' }}
-          className="flex justify-center w-full mb-12 md:mb-14 px-1 sm:px-0"
+          className="flex justify-center w-full mb-12 md:mb-14"
         >
           <img
             src={publicAssetUrl('/images/logo/refined-spaces-hero-horizontal.png')}
             alt="Refined Spaces"
-            width={819}
-            height={1024}
-            className="mx-auto block h-auto w-auto max-h-[min(52svh,520px)] max-w-[min(820px,calc(100vw-3rem))] max-[380px]:max-w-[calc(100vw-2rem)] object-contain"
+            width={820}
+            height={461}
+            className="mx-auto w-full max-w-[min(100%,820px)] h-auto object-contain"
             loading="eager"
-            fetchPriority="high"
             decoding="async"
+            fetchPriority="high"
           />
         </motion.div>
 
