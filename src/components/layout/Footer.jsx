@@ -1,5 +1,4 @@
 import { FOOTER_NAV_LINKS, FOOTER } from '../../constants/content'
-import { LogoFooter } from '../ui/Logo'
 
 export function Footer() {
   const bookHref = FOOTER.externalBookStayHref
@@ -9,7 +8,13 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10">
           <div className="lg:col-span-1">
-            <LogoFooter />
+            <img
+              src="/images/badge-circle.png"
+              alt="Refined Spaces — Curated Stays, Elevated Experiences"
+              className="w-32 h-32 md:w-36 md:h-36 object-contain"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
 
           <div>
