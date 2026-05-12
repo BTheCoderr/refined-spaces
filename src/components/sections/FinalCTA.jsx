@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { FINAL_CTA, FOOTER } from '../../constants/content'
 import { Button } from '../ui/Button'
 import { AnimateOnScroll } from '../ui/AnimateOnScroll'
-import { LogoIcon, Wordmark } from '../ui/Logo'
+import { LogoIcon, LogoHeroFramedRsMark, Wordmark } from '../ui/Logo'
 import { Send, Phone, CheckCircle } from 'lucide-react'
 
 async function sendNotificationEmail(fd) {
@@ -67,8 +67,8 @@ export function FinalCTA() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <LogoIcon size={48} framed className="shrink-0" />
-                  <span aria-hidden className="block h-8 w-px bg-gold/45" />
+                  <LogoHeroFramedRsMark className="w-12 h-12 shrink-0" />
+                  <span aria-hidden className="block h-10 w-px bg-gold/45" />
                   <Wordmark size="md" color="#FFFDF9" />
                 </div>
                 <div className="flex items-center gap-3 text-linen/50 text-sm">
