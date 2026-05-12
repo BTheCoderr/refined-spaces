@@ -1,4 +1,5 @@
 import { FOOTER_NAV_LINKS, FOOTER } from '../../constants/content'
+import { publicAssetUrl } from '../../utils/assetUrl'
 
 export function Footer() {
   const bookHref = FOOTER.externalBookStayHref
@@ -7,14 +8,18 @@ export function Footer() {
     <footer className="bg-navy border-t border-gold/10">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10">
-          <div className="lg:col-span-1">
-            <img
-              src="/images/badge-circle.png"
-              alt="Refined Spaces — Curated Stays, Elevated Experiences"
-              className="w-32 h-32 md:w-36 md:h-36 object-contain"
-              loading="lazy"
-              decoding="async"
-            />
+          <div className="lg:col-span-1 flex justify-center lg:justify-start">
+            <div className="inline-flex bg-navy shrink-0">
+              <img
+                src={publicAssetUrl('/images/logo/refined-spaces-footer-badge.png')}
+                alt="Refined Spaces badge"
+                width={144}
+                height={144}
+                className="w-28 sm:w-32 md:w-36 h-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </div>
 
           <div>
