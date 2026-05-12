@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
 <title id="title">Refined Spaces Logo</title>
 <desc id="desc">Luxury hospitality logo for Refined Spaces featuring an architectural arched emblem and R monogram.</desc>
-<rect width="1024" height="1024" fill="#0E1E2D"/>
-<circle cx="512" cy="512" r="420" fill="#0E1E2D" stroke="#C5A96A" stroke-width="8"/>
+<rect width="1024" height="1024" fill="#0D1E30"/>
+<circle cx="512" cy="512" r="420" fill="#0D1E30" stroke="#C5A96A" stroke-width="8"/>
 <circle cx="512" cy="512" r="372" fill="none" stroke="#C5A96A" stroke-width="3" opacity="0.75"/>
 <circle cx="512" cy="512" r="260" fill="none" stroke="#C5A96A" stroke-width="2" opacity="0.35"/>
 <path id="topArc" d="M 158 512 A 354 354 0 0 1 866 512" fill="none"/>

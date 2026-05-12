@@ -20,7 +20,7 @@
 
 const COLORS = {
   gold: '#C5A96A',
-  navy: '#0E1E2D',
+  navy: '#0D1E30',
   ivory: '#FFFDF9',
   linen: '#F5F0E8',
 }

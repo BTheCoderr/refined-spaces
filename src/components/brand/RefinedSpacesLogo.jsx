@@ -1,5 +1,5 @@
 const COLORS = {
-  navy: '#0E1E2D',
+  navy: '#0D1E30',
   gold: '#C5A96A',
   linen: '#F5F0E8',
   slate: '#4A6070',
