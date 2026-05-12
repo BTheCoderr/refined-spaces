@@ -58,7 +58,7 @@ export const WHO_WE_ARE = {
   headline: 'Who Are We',
   body: [
     "Refined Spaces was born at the intersection of Rhode Island's historic character and the new era of global hospitality. As Rhode Island's short-term rental market shifts toward professionalized standards, we identified a critical gap: properties with immense potential were being held back by average management.",
-    'We do more than manage stays — we curate elite real estate assets that represent the quality, character, and hospitality of the communities they represent.',
+    'We do more than manage stays — we curate real estate assets that represent the quality, character, and hospitality of the communities they represent.',
   ],
 }
 
@@ -179,7 +179,7 @@ export const GUEST_EXPERIENCE = {
     {
       title: 'Local Hospitality',
       description:
-        'Curated neighborhood guides, local recommendations, and a welcoming experience that helps guests enjoy the best of the area.',
+        'Neighborhood guides, local recommendations, and a welcoming experience that helps guests enjoy the best of the area.',
       icon: 'MapPin',
     },
     {
