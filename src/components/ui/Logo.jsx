@@ -197,10 +197,15 @@ export const LogoMark = LogoIcon
  * overlapping horizontal RS monogram with a subtle softness on “S”.
  */
 export function LogoHeroFramedRsMark({
+  on = 'dark',
   title = 'Refined Spaces RS monogram',
   className = '',
 }) {
   const vb = 120
+  const bg = on === 'light' ? COLORS.linen : COLORS.navy
+  const stroke = on === 'light' ? '#C9AD72' : COLORS.gold
+  const glyph = on === 'light' ? '#C5A96A' : COLORS.gold
+  const sOpacity = on === 'light' ? 0.78 : 0.86
   return (
     <svg
       viewBox={`0 0 ${vb} ${vb}`}
@@ -209,8 +214,8 @@ export function LogoHeroFramedRsMark({
       role="img"
       aria-label={title}
     >
-      <rect width={vb} height={vb} fill={COLORS.navy} />
-      <g stroke={COLORS.gold} strokeWidth="1.2" strokeLinecap="round" fill="none">
+      <rect width={vb} height={vb} fill={bg} />
+      <g stroke={stroke} strokeWidth="1.2" strokeLinecap="round" fill="none">
         <path d="M11 41 V11 H41" />
         <path d="M79 11 H109 V41" />
         <path d="M109 79 V109 H79" />
@@ -219,7 +224,7 @@ export function LogoHeroFramedRsMark({
       <text
         x="20"
         y="88"
-        fill={COLORS.gold}
+        fill={glyph}
         fontFamily={SERIF}
         fontSize="72"
         fontWeight="500"
@@ -227,7 +232,7 @@ export function LogoHeroFramedRsMark({
       >
         R
       </text>
-      <text x="62" y="88" fill={COLORS.gold} opacity="0.86" fontFamily={SERIF} fontSize="72" fontWeight="500" letterSpacing="-8">
+      <text x="62" y="88" fill={glyph} opacity={sOpacity} fontFamily={SERIF} fontSize="72" fontWeight="500" letterSpacing="-8">
         S
       </text>
     </svg>
@@ -442,7 +447,7 @@ export function LogoCircleBadge({
   ringColor = COLORS.gold,
   textColor = COLORS.gold,
   markColor = COLORS.gold,
-  fillColor = 'transparent',
+  fillColor = COLORS.navy,
   className = '',
   title = 'Refined Spaces · Curated Stays · Elevated Experiences',
 }) {
@@ -469,8 +474,8 @@ export function LogoCircleBadge({
         />
       </defs>
 
-      <circle cx="120" cy="120" r="116" stroke={ringColor} strokeWidth="2" fill={fillColor} />
-      <circle cx="120" cy="120" r="105" stroke={ringColor} strokeWidth="0.75" opacity="0.55" fill="none" />
+      <circle cx="120" cy="120" r="117" stroke={ringColor} strokeWidth="3" fill={fillColor} />
+      <circle cx="120" cy="120" r="105" stroke={ringColor} strokeWidth="0.9" opacity="0.6" fill="none" />
 
       <text
         fill={textColor}
@@ -485,6 +490,9 @@ export function LogoCircleBadge({
         </textPath>
       </text>
 
+      <circle cx="30" cy="120" r="2.5" fill={ringColor} />
+      <circle cx="210" cy="120" r="2.5" fill={ringColor} />
+
       <text
         fill={textColor}
         fontFamily={SANS}
@@ -494,42 +502,23 @@ export function LogoCircleBadge({
         textAnchor="middle"
       >
         <textPath href="#badgeArcBottom" startOffset="50%">
-          CURATED STAYS · ELEVATED EXPERIENCES
+          CURATED STAYS ELEVATED EXPERIENCES
         </textPath>
       </text>
 
-      <g stroke={ringColor} strokeWidth="1.25" fill="none" strokeLinecap="round">
-        <path d="M80 102 V86 H96" />
-        <path d="M144 86 H160 V102" />
-        <path d="M160 158 V174 H144" />
-        <path d="M96 174 H80 V158" />
-      </g>
-
-      <g transform="translate(120 122)">
+      <g transform="translate(120 130)">
         <text
           x="0"
-          y="22"
+          y="0"
           textAnchor="middle"
           fill={markColor}
           fontFamily={SERIF}
-          fontSize="80"
+          fontSize="88"
           fontWeight="500"
           letterSpacing="-10"
         >
           <tspan dx="-18">R</tspan>
-          <tspan dx="-10">S</tspan>
-        </text>
-        <text
-          x="0"
-          y="46"
-          textAnchor="middle"
-          fill={textColor}
-          fontFamily={SANS}
-          fontSize="8"
-          fontWeight="500"
-          letterSpacing="3.5"
-        >
-          RHODE ISLAND
+          <tspan dx="-10" opacity="0.86">S</tspan>
         </text>
       </g>
     </svg>
