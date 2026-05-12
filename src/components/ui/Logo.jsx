@@ -6,8 +6,9 @@
  *                         or `variant="nav"` for the header navy tile mark
  *   - LogoMonogram        Alias kept for backwards compatibility
  *   - LogoCompact         Navbar lockup: icon + REFINED SPACES wordmark
- *   - LogoHorizontal      Horizontal lockup with wordmark, tagline, locale (hero)
- *   - LogoStacked         Stacked variant of the horizontal lockup
+ *   - LogoHorizontal      Horizontal lockup with icon, tagline + optional locale
+ *   - LogoHeroHorizontal Hero-only framed horizontal lockup (no locale)
+ *   - LogoStacked         Stacked variant of Concept 2 lockup
  *   - LogoCircleBadge     Concept 2 "Circle Badge" version (lower footer)
  *   - LogoFooter          Footer brand block built from LogoCircleBadge
  *   - Wordmark            Standalone "REFINED SPACES" wordmark
@@ -192,6 +193,79 @@ export const LogoMonogram = LogoIcon
 export const LogoMark = LogoIcon
 
 /**
+ * Square hero mark only: midnight navy tile, champagne-gold open-corner frame,
+ * overlapping horizontal RS monogram with a subtle softness on “S”.
+ */
+export function LogoHeroFramedRsMark({
+  title = 'Refined Spaces RS monogram',
+  className = '',
+}) {
+  const vb = 120
+  return (
+    <svg
+      viewBox={`0 0 ${vb} ${vb}`}
+      xmlns="http://www.w3.org/2000/svg"
+      className={`aspect-square shrink-0 ${className}`}
+      role="img"
+      aria-label={title}
+    >
+      <rect width={vb} height={vb} fill={COLORS.navy} />
+      <g stroke={COLORS.gold} strokeWidth="1.2" strokeLinecap="round" fill="none">
+        <path d="M11 41 V11 H41" />
+        <path d="M79 11 H109 V41" />
+        <path d="M109 79 V109 H79" />
+        <path d="M41 109 H11 V79" />
+      </g>
+      <text
+        x="20"
+        y="88"
+        fill={COLORS.gold}
+        fontFamily={SERIF}
+        fontSize="72"
+        fontWeight="500"
+        letterSpacing="-8"
+      >
+        R
+      </text>
+      <text x="62" y="88" fill={COLORS.gold} opacity="0.86" fontFamily={SERIF} fontSize="72" fontWeight="500" letterSpacing="-8">
+        S
+      </text>
+    </svg>
+  )
+}
+
+/**
+ * Hero-page horizontal lockup: framed overlapping RS tile | divider | REFINED SPACES · tagline.
+ * No Rhode Island line. Responsive: stacked vertically on narrow viewports.
+ */
+export function LogoHeroHorizontal({ className = '' }) {
+  const divider = COLORS.gold
+  const textColor = COLORS.ivory
+
+  return (
+    <div
+      className={`flex flex-col md:flex-row items-center md:items-stretch justify-center gap-6 md:gap-7 lg:gap-9 w-full mx-auto ${className}`}
+    >
+      <LogoHeroFramedRsMark className="mx-auto w-[5.625rem] h-[5.625rem] sm:w-[6.125rem] sm:h-[6.125rem] md:w-[7rem] md:h-[7rem] lg:w-[7.75rem] lg:h-[7.75rem]" />
+
+      <span aria-hidden className="hidden md:block w-px self-stretch shrink-0 min-h-[5.75rem]" style={{ backgroundColor: divider, opacity: 0.7 }} />
+
+      <div className="flex flex-col items-center md:items-start gap-3 lg:gap-3.5 text-center md:text-left max-w-md md:max-w-none">
+        <Wordmark color={textColor} size="xl" className="text-[1.625rem] sm:text-[2rem] md:text-[2.35rem] lg:text-[2.65rem]" />
+        {/* Tagline: two lines mobile, single line tablet+ */}
+        <div className="font-sans font-medium uppercase tracking-[0.29em] text-gold text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] leading-relaxed md:tracking-[0.32em]">
+          <span className="flex flex-col gap-1 md:hidden items-center">
+            <span>CURATED STAYS.</span>
+            <span>ELEVATED EXPERIENCES.</span>
+          </span>
+          <span className="hidden md:block">CURATED STAYS · ELEVATED EXPERIENCES</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/**
  * "REFINED SPACES" wordmark. Editorial serif, all caps, wide tracking.
  */
 export function Wordmark({ color = COLORS.ivory, size = 'md', className = '' }) {
@@ -259,9 +333,8 @@ function LocaleLine({ color = COLORS.gold, className = '' }) {
 }
 
 /**
- * Concept 2 horizontal lockup. Used as the hero brand mark.
- *
- * Renders: [ icon | thin gold rule | REFINED SPACES wordmark + tagline + locale ]
+ * Concept 2 horizontal lockup: icon | rule | REFINED SPACES + optional tagline/locale.
+ * For the hero homepage lockup prefer `LogoHeroHorizontal` (framed navy tile / no locale).
  *
  * When `as="div"` (default) the lockup is a presentational element. Pass
  * `as="a"` for an anchored variant.

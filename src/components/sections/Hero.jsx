@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { HERO } from '../../constants/content'
 import { Button } from '../ui/Button'
-import { LogoHorizontal, LogoStacked } from '../ui/Logo'
+import { LogoHeroHorizontal } from '../ui/Logo'
 import { publicAssetUrl } from '../../utils/assetUrl'
 
 export function Hero() {
@@ -22,26 +22,21 @@ export function Hero() {
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-navy/82 via-navy/68 to-navy/88" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center pt-28 pb-24">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 pt-28 pb-24 w-full flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.15, ease: 'easeOut' }}
-          className="flex justify-center mb-12 md:mb-14"
+          className="flex justify-center w-full mb-12 md:mb-14"
         >
-          <span className="hidden sm:inline-flex">
-            <LogoHorizontal on="dark" iconSize={86} size="xl" />
-          </span>
-          <span className="sm:hidden">
-            <LogoStacked on="dark" iconSize={72} />
-          </span>
+          <LogoHeroHorizontal />
         </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.55 }}
-          className="max-w-2xl mx-auto text-linen/75 text-[15px] md:text-[17px] leading-[1.85] mb-12 md:mb-14"
+          className="max-w-2xl mx-auto text-linen/75 text-[15px] md:text-[17px] leading-[1.85] mb-12 md:mb-14 text-center"
         >
           {HERO.subheadline}
         </motion.p>

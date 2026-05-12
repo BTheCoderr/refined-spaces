@@ -92,7 +92,8 @@ Concept 2 RS monogram lockups:
 - `LogoCompact` — Navbar (`iconVariant="nav"` navy tile mark + wordmark); optional `iconFramed` open-corner variant for other contexts
 - `LogoIcon` — placements / favicon; pass `variant="nav"` or `framed`
 - `LogoFooter` — Footer circle badge
-- `LogoStacked` / `LogoHorizontal` — Hero and collateral-style lockups
+- `LogoHeroHorizontal` — Hero only: navy framed RS tile, divider, wordmark + gold tagline (no locale)
+- `LogoStacked` / `LogoHorizontal` — Stacked/collateral lockups (horizontal may include locale)
 
 All lockups are defined in `src/components/ui/Logo.jsx`.
 
