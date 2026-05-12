@@ -213,7 +213,7 @@ export function LogoHeroFramedRsMark({
         <img
           src={publicAssetUrl('/images/logo/refined-spaces-stacked-mark.png')}
           alt=""
-          className="h-full w-auto object-contain"
+          className="h-full w-auto object-contain mix-blend-lighten"
           decoding="async"
         />
       </span>
@@ -414,29 +414,23 @@ export function LogoStacked({ on = 'dark', iconSize = 64, className = '', showLo
 }
 
 /**
- * Compact navbar lockup: icon + wordmark, single line.
- * Use `iconVariant="nav"` for the framed navy header mark (Concept 2 dashboard).
+ * Compact navbar lockup: stacked framed RS monogram + REFINED SPACES wordmark.
+ * Renders the high-fidelity stacked PNG via LogoHeroFramedRsMark for the icon.
  */
 export function LogoCompact({
   on = 'dark',
-  iconSize = 32,
-  iconFramed = false,
-  iconVariant = 'default',
+  iconSize = 38,
   className = '',
   href = '#top',
   onClick,
 }) {
-  const markColor = COLORS.gold
   const textColor = on === 'dark' ? COLORS.ivory : COLORS.navy
 
   return (
     <a href={href} onClick={onClick} className={`inline-flex items-center gap-3 ${className}`}>
-      <LogoIcon
-        size={iconSize}
-        color={markColor}
-        framed={iconVariant === 'nav' ? false : iconFramed}
-        variant={iconVariant}
-      />
+      <span style={{ width: iconSize, height: iconSize }} className="inline-flex shrink-0">
+        <LogoHeroFramedRsMark on={on} className="w-full h-full" />
+      </span>
       <Wordmark color={textColor} size="sm" />
     </a>
   )
