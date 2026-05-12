@@ -2,7 +2,8 @@
  * Concept 2 — Timeless Monogram brand system.
  *
  * Public components:
- *   - LogoIcon            Icon-only RS monogram (no surrounding circle)
+ *   - LogoIcon            Icon-only RS monogram; optional open-corner `framed`,
+ *                         or `variant="nav"` for the header navy tile mark
  *   - LogoMonogram        Alias kept for backwards compatibility
  *   - LogoCompact         Navbar lockup: icon + REFINED SPACES wordmark
  *   - LogoHorizontal      Horizontal lockup with wordmark, tagline, locale (hero)
@@ -30,10 +31,73 @@ const SANS = "'DM Sans', system-ui, sans-serif"
  * Icon-only RS monogram. Reproduces Concept 2's interlocking serif "R" and "S"
  * by overlapping two serif glyphs with negative kerning.
  *
- * Pass `framed` to wrap the monogram in a thin open-corner architectural frame
- * (eight champagne-gold corner ticks, no continuous border).
+ * Pass `variant="nav"` for the header lockup: midnight navy tile, thin gold
+ * rectangular frame with subtle chamfered inner line, vertically stacked RS.
+ * (Dominates over `framed` when set.)
+ *
+ * Pass `framed` for the open-corner architectural frame (no navy fill).
  */
-export function LogoIcon({ size = 40, color = COLORS.gold, framed = false, className = '', title = 'Refined Spaces' }) {
+export function LogoIcon({
+  size = 40,
+  color = COLORS.gold,
+  framed = false,
+  variant = 'default',
+  className = '',
+  title = 'Refined Spaces',
+}) {
+  const navy = COLORS.navy
+
+  if (variant === 'nav') {
+    const vbW = 52
+    const vbH = 78
+    const w = (size * vbW) / vbH
+    const h = size
+    return (
+      <svg
+        viewBox={`0 0 ${vbW} ${vbH}`}
+        width={w}
+        height={h}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className={className}
+        role="img"
+        aria-label={title}
+      >
+        <rect width={vbW} height={vbH} fill={navy} />
+        <rect x="3.5" y="3.5" width={vbW - 7} height={vbH - 7} stroke={color} strokeWidth="1.15" />
+        <path
+          d="M 9 6.5 L 43 6.5 L 45.5 9 L 45.5 69 L 43 71.5 L 9 71.5 L 6.5 69 L 6.5 9 Z"
+          stroke={color}
+          strokeWidth="0.85"
+          strokeLinejoin="round"
+          fill="none"
+        />
+        <text
+          x="26"
+          y="35"
+          textAnchor="middle"
+          fill={color}
+          fontFamily={SERIF}
+          fontSize="22"
+          fontWeight="600"
+        >
+          R
+        </text>
+        <text
+          x="26"
+          y="58"
+          textAnchor="middle"
+          fill={color}
+          fontFamily={SERIF}
+          fontSize="22"
+          fontWeight="600"
+        >
+          S
+        </text>
+      </svg>
+    )
+  }
+
   if (framed) {
     const w = size
     const h = size
@@ -267,14 +331,28 @@ export function LogoStacked({ on = 'dark', iconSize = 64, className = '', showLo
 
 /**
  * Compact navbar lockup: icon + wordmark, single line.
+ * Use `iconVariant="nav"` for the framed navy header mark (Concept 2 dashboard).
  */
-export function LogoCompact({ on = 'dark', iconSize = 32, iconFramed = false, className = '', href = '#top', onClick }) {
+export function LogoCompact({
+  on = 'dark',
+  iconSize = 32,
+  iconFramed = false,
+  iconVariant = 'default',
+  className = '',
+  href = '#top',
+  onClick,
+}) {
   const markColor = COLORS.gold
   const textColor = on === 'dark' ? COLORS.ivory : COLORS.navy
 
   return (
     <a href={href} onClick={onClick} className={`inline-flex items-center gap-3 ${className}`}>
-      <LogoIcon size={iconSize} color={markColor} framed={iconFramed} />
+      <LogoIcon
+        size={iconSize}
+        color={markColor}
+        framed={iconVariant === 'nav' ? false : iconFramed}
+        variant={iconVariant}
+      />
       <Wordmark color={textColor} size="sm" />
     </a>
   )

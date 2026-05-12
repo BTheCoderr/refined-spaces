@@ -87,12 +87,12 @@ Inquiries are captured in **Netlify Forms** first; a serverless function **`cont
 
 ### Logo
 
-The **Modern Gateway** mark — an architectural arch with centered "R" — appears in multiple lockups:
+Concept 2 RS monogram lockups:
 
-- `LogoCompact` — Navbar (icon + wordmark)
-- `LogoIcon` — small placements / favicon source; pass `framed` for the architectural variant
-- `LogoFooter` — Footer (icon + wordmark + tagline + location)
-- `LogoStacked` / `LogoHorizontal` — Available for collateral
+- `LogoCompact` — Navbar (`iconVariant="nav"` navy tile mark + wordmark); optional `iconFramed` open-corner variant for other contexts
+- `LogoIcon` — placements / favicon; pass `variant="nav"` or `framed`
+- `LogoFooter` — Footer circle badge
+- `LogoStacked` / `LogoHorizontal` — Hero and collateral-style lockups
 
 All lockups are defined in `src/components/ui/Logo.jsx`.
 
