@@ -10,12 +10,12 @@ export function RhodeIsland() {
       className="relative scroll-mt-24 lg:scroll-mt-[5.25rem] py-24 md:py-32 lg:py-40 overflow-hidden"
     >
       <img
-        src={publicAssetUrl('/images/hero/newport-beach.jpg')}
-        alt="Newport, Rhode Island ocean view overlooking the Atlantic shoreline"
+        src={publicAssetUrl('/images/sections/newport-coastline-homes-aerial.jpg')}
+        alt="Aerial view of Newport, Rhode Island coastline homes overlooking the ocean"
         className="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/72 to-navy/55" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy/82 via-navy/58 to-navy/42" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
