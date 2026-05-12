@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { HERO } from '../../constants/content'
 import { Button } from '../ui/Button'
+import { LogoHeroHorizontal } from '../ui/Logo'
 import { publicAssetUrl } from '../../utils/assetUrl'
 
 export function Hero() {
@@ -28,16 +29,7 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.15, ease: 'easeOut' }}
           className="flex justify-center w-full mb-12 md:mb-14"
         >
-          <img
-            src={publicAssetUrl('/images/logo/refined-spaces-hero-horizontal.png')}
-            alt="Refined Spaces"
-            width={820}
-            height={461}
-            className="mx-auto w-full max-w-[min(100%,820px)] h-auto object-contain"
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
-          />
+          <LogoHeroHorizontal />
         </motion.div>
 
         <motion.p

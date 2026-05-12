@@ -1,3 +1,5 @@
+import { publicAssetUrl } from '../../utils/assetUrl'
+
 /**
  * Concept 2 — Timeless Monogram brand system.
  *
@@ -201,11 +203,27 @@ export function LogoHeroFramedRsMark({
   title = 'Refined Spaces RS monogram',
   className = '',
 }) {
+  if (on === 'dark') {
+    return (
+      <span
+        className={`inline-flex items-center justify-center bg-navy aspect-square shrink-0 overflow-hidden ${className}`}
+        role="img"
+        aria-label={title}
+      >
+        <img
+          src={publicAssetUrl('/images/logo/refined-spaces-stacked-mark.png')}
+          alt=""
+          className="h-full w-auto object-contain"
+          decoding="async"
+        />
+      </span>
+    )
+  }
+
   const vb = 120
-  const bg = on === 'light' ? COLORS.linen : COLORS.navy
-  const stroke = on === 'light' ? '#C9AD72' : COLORS.gold
-  const glyph = on === 'light' ? '#C5A96A' : COLORS.gold
-  const sOpacity = on === 'light' ? 0.78 : 0.86
+  const bg = COLORS.linen
+  const stroke = '#C9AD72'
+  const glyph = '#C5A96A'
   return (
     <svg
       viewBox={`0 0 ${vb} ${vb}`}
@@ -221,20 +239,8 @@ export function LogoHeroFramedRsMark({
         <path d="M109 79 V109 H79" />
         <path d="M41 109 H11 V79" />
       </g>
-      <text
-        x="20"
-        y="88"
-        fill={glyph}
-        fontFamily={SERIF}
-        fontSize="72"
-        fontWeight="500"
-        letterSpacing="-8"
-      >
-        R
-      </text>
-      <text x="62" y="88" fill={glyph} opacity={sOpacity} fontFamily={SERIF} fontSize="72" fontWeight="500" letterSpacing="-8">
-        S
-      </text>
+      <text x="38" y="65" fill={glyph} fontFamily={SERIF} fontSize="56" fontWeight="500">R</text>
+      <text x="56" y="100" fill={glyph} opacity={0.82} fontFamily={SERIF} fontSize="56" fontWeight="500">S</text>
     </svg>
   )
 }

@@ -67,7 +67,7 @@ Inquiries are captured in **Netlify Forms** first; a serverless function **`cont
 
 | Token       | Hex       | Usage                        |
 |-------------|-----------|------------------------------|
-| Navy        | `#0D1E30` | Primary dark / backgrounds   |
+| Navy        | `#0E1E2D` | Primary dark / backgrounds   |
 | Navy Light  | `#162838` | Card backgrounds (dark)      |
 | Gold        | `#C5A96A` | Accent / CTAs / icons        |
 | Gold Light  | `#D4BA88` | Hover states                 |
