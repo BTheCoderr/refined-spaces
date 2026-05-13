@@ -206,14 +206,14 @@ export function LogoHeroFramedRsMark({
   if (on === 'dark') {
     return (
       <span
-        className={`inline-flex items-center justify-center bg-navy aspect-square shrink-0 overflow-hidden ${className}`}
+        className={`inline-flex items-center justify-center aspect-square shrink-0 overflow-hidden ${className}`}
         role="img"
         aria-label={title}
       >
         <img
           src={publicAssetUrl('/images/logo/refined-spaces-stacked-mark.png')}
           alt=""
-          className="h-full w-auto object-contain mix-blend-lighten"
+          className="h-full w-auto object-contain mix-blend-screen"
           decoding="async"
         />
       </span>

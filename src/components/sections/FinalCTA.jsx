@@ -57,7 +57,7 @@ export function FinalCTA() {
           src={publicAssetUrl('/images/logo/refined-spaces-stacked-mark.png')}
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-contain mix-blend-lighten"
+          className="w-full h-full object-contain mix-blend-screen"
         />
       </div>
 
