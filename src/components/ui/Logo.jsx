@@ -1,3 +1,5 @@
+import { publicAssetUrl } from '../../utils/assetUrl'
+
 /**
  * Concept 2 — Timeless Monogram brand system.
  *
@@ -46,56 +48,15 @@ export function LogoIcon({
   className = '',
   title = 'Refined Spaces',
 }) {
-  const navy = COLORS.navy
-
   if (variant === 'nav') {
-    const vbW = 52
-    const vbH = 78
-    const w = (size * vbW) / vbH
-    const h = size
     return (
-      <svg
-        viewBox={`0 0 ${vbW} ${vbH}`}
-        width={w}
-        height={h}
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+      <img
+        src={publicAssetUrl('/images/logo/refined-spaces-rs-framed.png')}
+        alt={title}
         className={className}
-        role="img"
-        aria-label={title}
-      >
-        <rect width={vbW} height={vbH} fill={navy} />
-        <rect x="3.5" y="3.5" width={vbW - 7} height={vbH - 7} stroke={color} strokeWidth="1.15" />
-        <path
-          d="M 9 6.5 L 43 6.5 L 45.5 9 L 45.5 69 L 43 71.5 L 9 71.5 L 6.5 69 L 6.5 9 Z"
-          stroke={color}
-          strokeWidth="0.85"
-          strokeLinejoin="round"
-          fill="none"
-        />
-        <text
-          x="26"
-          y="35"
-          textAnchor="middle"
-          fill={color}
-          fontFamily={SERIF}
-          fontSize="22"
-          fontWeight="600"
-        >
-          R
-        </text>
-        <text
-          x="26"
-          y="58"
-          textAnchor="middle"
-          fill={color}
-          fontFamily={SERIF}
-          fontSize="22"
-          fontWeight="600"
-        >
-          S
-        </text>
-      </svg>
+        style={{ height: size, width: 'auto' }}
+        decoding="async"
+      />
     )
   }
 
@@ -197,51 +158,16 @@ export const LogoMark = LogoIcon
  * overlapping horizontal RS monogram with a subtle softness on “S”.
  */
 export function LogoHeroFramedRsMark({
-  on = 'dark',
   title = 'Refined Spaces RS monogram',
   className = '',
 }) {
-  const bg      = on === 'light' ? COLORS.linen    : COLORS.navy
-  const border  = on === 'light' ? '#C9AD72'       : COLORS.gold
-  const glyph   = on === 'light' ? '#C5A96A'       : COLORS.gold
-
   return (
-    <svg
-      viewBox="0 0 100 140"
-      xmlns="http://www.w3.org/2000/svg"
-      className={`shrink-0 ${className}`}
-      role="img"
-      aria-label={title}
-      style={{ aspectRatio: '100 / 140' }}
-    >
-      {/* Background — same hex as --color-navy so zero tone-mismatch */}
-      <rect width="100" height="140" fill={bg} />
-      {/* Outer border */}
-      <rect x="4" y="4" width="92" height="132" stroke={border} strokeWidth="1.2" fill="none" />
-      {/* Inner inset border */}
-      <rect x="8" y="8" width="84" height="124" stroke={border} strokeWidth="0.55" fill="none" opacity="0.55" />
-      {/* Stacked R — top half */}
-      <text
-        x="16"
-        y="88"
-        fill={glyph}
-        fontFamily={SERIF}
-        fontSize="90"
-        fontWeight="500"
-        letterSpacing="-4"
-      >R</text>
-      {/* Stacked S — overlaps R leg, shifted right and down */}
-      <text
-        x="46"
-        y="128"
-        fill={glyph}
-        fontFamily={SERIF}
-        fontSize="90"
-        fontWeight="500"
-        letterSpacing="-4"
-        opacity="0.88"
-      >S</text>
-    </svg>
+    <img
+      src={publicAssetUrl('/images/logo/refined-spaces-rs-framed.png')}
+      alt={title}
+      className={`shrink-0 object-contain ${className}`}
+      decoding="async"
+    />
   )
 }
 

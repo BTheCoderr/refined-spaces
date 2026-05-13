@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { FINAL_CTA, FOOTER } from '../../constants/content'
 import { Button } from '../ui/Button'
 import { AnimateOnScroll } from '../ui/AnimateOnScroll'
-import { LogoHeroFramedRsMark, Wordmark } from '../ui/Logo'
+import { Wordmark } from '../ui/Logo'
 import { publicAssetUrl } from '../../utils/assetUrl'
 import { Send, Phone, CheckCircle } from 'lucide-react'
 
@@ -52,12 +52,13 @@ export function FinalCTA() {
       id="contact"
       className="scroll-mt-24 lg:scroll-mt-[5.25rem] bg-navy py-24 md:py-32 lg:py-36 relative overflow-hidden"
     >
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none w-80 h-80">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.06] pointer-events-none select-none">
         <img
-          src={publicAssetUrl('/images/logo/refined-spaces-stacked-mark.png')}
+          src={publicAssetUrl('/images/logo/refined-spaces-rs-mark.png')}
           alt=""
-          aria-hidden="true"
-          className="w-full h-full object-contain mix-blend-screen"
+          aria-hidden
+          className="h-[26rem] md:h-[32rem] w-auto"
+          decoding="async"
         />
       </div>
 
@@ -73,7 +74,13 @@ export function FinalCTA() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <LogoHeroFramedRsMark className="w-12 h-12 shrink-0" />
+                  <img
+                    src={publicAssetUrl('/images/logo/refined-spaces-rs-framed.png')}
+                    alt=""
+                    aria-hidden
+                    className="h-14 w-auto shrink-0"
+                    decoding="async"
+                  />
                   <span aria-hidden className="block h-10 w-px bg-gold/45" />
                   <Wordmark size="md" color="#FFFDF9" />
                 </div>
