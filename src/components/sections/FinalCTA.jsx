@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { FINAL_CTA, FOOTER } from '../../constants/content'
 import { Button } from '../ui/Button'
 import { AnimateOnScroll } from '../ui/AnimateOnScroll'
-import { LogoIcon, LogoHeroFramedRsMark, Wordmark } from '../ui/Logo'
+import { LogoHeroFramedRsMark, Wordmark } from '../ui/Logo'
+import { publicAssetUrl } from '../../utils/assetUrl'
 import { Send, Phone, CheckCircle } from 'lucide-react'
 
 async function sendNotificationEmail(fd) {
@@ -51,8 +52,13 @@ export function FinalCTA() {
       id="contact"
       className="scroll-mt-24 lg:scroll-mt-[5.25rem] bg-navy py-24 md:py-32 lg:py-36 relative overflow-hidden"
     >
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none">
-        <LogoIcon size={320} color="#FFFDF9" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none w-80 h-80">
+        <img
+          src={publicAssetUrl('/images/logo/refined-spaces-stacked-mark.png')}
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-contain mix-blend-lighten"
+        />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
