@@ -12,7 +12,7 @@ export function WhoWeAre() {
       <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
         <AnimateOnScroll>
           <div className="flex items-center gap-5 mb-10 md:mb-12">
-            <LogoHeroFramedRsMark on="light" className="w-14 h-14 md:w-16 md:h-16" />
+            <LogoHeroFramedRsMark className="w-20 md:w-24" />
             <span aria-hidden className="block h-10 w-px bg-gold/45" />
             <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.85rem] font-extrabold text-navy leading-[1.1] tracking-tight">
               {WHO_WE_ARE.headline}

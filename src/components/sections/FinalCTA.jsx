@@ -78,7 +78,7 @@ export function FinalCTA() {
                     src={publicAssetUrl('/images/logo/refined-spaces-rs-framed.png')}
                     alt=""
                     aria-hidden
-                    className="h-14 w-auto shrink-0"
+                    className="h-20 w-auto shrink-0"
                     decoding="async"
                   />
                   <span aria-hidden className="block h-10 w-px bg-gold/45" />

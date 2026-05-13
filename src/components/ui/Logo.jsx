@@ -183,9 +183,9 @@ export function LogoHeroHorizontal({ className = '' }) {
     <div
       className={`flex flex-col md:flex-row items-center md:items-stretch justify-center gap-6 md:gap-7 lg:gap-9 w-full mx-auto ${className}`}
     >
-      <LogoHeroFramedRsMark className="mx-auto w-[4.5rem] sm:w-[5rem] md:w-[5.5rem] lg:w-[6.25rem]" />
+      <LogoHeroFramedRsMark className="mx-auto w-[6.5rem] sm:w-[7.25rem] md:w-[8rem] lg:w-[9rem]" />
 
-      <span aria-hidden className="hidden md:block w-px self-stretch shrink-0 min-h-[5.75rem]" style={{ backgroundColor: divider, opacity: 0.7 }} />
+      <span aria-hidden className="hidden md:block w-px self-stretch shrink-0 min-h-[8rem]" style={{ backgroundColor: divider, opacity: 0.7 }} />
 
       <div className="flex flex-col items-center md:items-start gap-3 lg:gap-3.5 text-center md:text-left max-w-md md:max-w-none">
         <Wordmark color={textColor} size="xl" className="text-[1.625rem] sm:text-[2rem] md:text-[2.35rem] lg:text-[2.65rem]" />
