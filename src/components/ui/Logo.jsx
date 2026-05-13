@@ -1,5 +1,3 @@
-import { publicAssetUrl } from '../../utils/assetUrl'
-
 /**
  * Concept 2 — Timeless Monogram brand system.
  *
@@ -203,44 +201,46 @@ export function LogoHeroFramedRsMark({
   title = 'Refined Spaces RS monogram',
   className = '',
 }) {
-  if (on === 'dark') {
-    return (
-      <span
-        className={`inline-flex items-center justify-center aspect-square shrink-0 overflow-hidden ${className}`}
-        role="img"
-        aria-label={title}
-      >
-        <img
-          src={publicAssetUrl('/images/logo/refined-spaces-stacked-mark.png')}
-          alt=""
-          className="h-full w-auto object-contain mix-blend-screen"
-          decoding="async"
-        />
-      </span>
-    )
-  }
+  const bg      = on === 'light' ? COLORS.linen    : COLORS.navy
+  const border  = on === 'light' ? '#C9AD72'       : COLORS.gold
+  const glyph   = on === 'light' ? '#C5A96A'       : COLORS.gold
 
-  const vb = 120
-  const bg = COLORS.linen
-  const stroke = '#C9AD72'
-  const glyph = '#C5A96A'
   return (
     <svg
-      viewBox={`0 0 ${vb} ${vb}`}
+      viewBox="0 0 100 140"
       xmlns="http://www.w3.org/2000/svg"
-      className={`aspect-square shrink-0 ${className}`}
+      className={`shrink-0 ${className}`}
       role="img"
       aria-label={title}
+      style={{ aspectRatio: '100 / 140' }}
     >
-      <rect width={vb} height={vb} fill={bg} />
-      <g stroke={stroke} strokeWidth="1.2" strokeLinecap="round" fill="none">
-        <path d="M11 41 V11 H41" />
-        <path d="M79 11 H109 V41" />
-        <path d="M109 79 V109 H79" />
-        <path d="M41 109 H11 V79" />
-      </g>
-      <text x="38" y="65" fill={glyph} fontFamily={SERIF} fontSize="56" fontWeight="500">R</text>
-      <text x="56" y="100" fill={glyph} opacity={0.82} fontFamily={SERIF} fontSize="56" fontWeight="500">S</text>
+      {/* Background — same hex as --color-navy so zero tone-mismatch */}
+      <rect width="100" height="140" fill={bg} />
+      {/* Outer border */}
+      <rect x="4" y="4" width="92" height="132" stroke={border} strokeWidth="1.2" fill="none" />
+      {/* Inner inset border */}
+      <rect x="8" y="8" width="84" height="124" stroke={border} strokeWidth="0.55" fill="none" opacity="0.55" />
+      {/* Stacked R — top half */}
+      <text
+        x="16"
+        y="88"
+        fill={glyph}
+        fontFamily={SERIF}
+        fontSize="90"
+        fontWeight="500"
+        letterSpacing="-4"
+      >R</text>
+      {/* Stacked S — overlaps R leg, shifted right and down */}
+      <text
+        x="46"
+        y="128"
+        fill={glyph}
+        fontFamily={SERIF}
+        fontSize="90"
+        fontWeight="500"
+        letterSpacing="-4"
+        opacity="0.88"
+      >S</text>
     </svg>
   )
 }
@@ -257,7 +257,7 @@ export function LogoHeroHorizontal({ className = '' }) {
     <div
       className={`flex flex-col md:flex-row items-center md:items-stretch justify-center gap-6 md:gap-7 lg:gap-9 w-full mx-auto ${className}`}
     >
-      <LogoHeroFramedRsMark className="mx-auto w-[5.625rem] h-[5.625rem] sm:w-[6.125rem] sm:h-[6.125rem] md:w-[7rem] md:h-[7rem] lg:w-[7.75rem] lg:h-[7.75rem]" />
+      <LogoHeroFramedRsMark className="mx-auto w-[4.5rem] sm:w-[5rem] md:w-[5.5rem] lg:w-[6.25rem]" />
 
       <span aria-hidden className="hidden md:block w-px self-stretch shrink-0 min-h-[5.75rem]" style={{ backgroundColor: divider, opacity: 0.7 }} />
 
@@ -414,23 +414,29 @@ export function LogoStacked({ on = 'dark', iconSize = 64, className = '', showLo
 }
 
 /**
- * Compact navbar lockup: stacked framed RS monogram + REFINED SPACES wordmark.
- * Renders the high-fidelity stacked PNG via LogoHeroFramedRsMark for the icon.
+ * Compact navbar lockup: icon + wordmark, single line.
+ * Use `iconVariant="nav"` for the framed navy header mark (Concept 2 dashboard).
  */
 export function LogoCompact({
   on = 'dark',
-  iconSize = 38,
+  iconSize = 32,
+  iconFramed = false,
+  iconVariant = 'default',
   className = '',
   href = '#top',
   onClick,
 }) {
+  const markColor = COLORS.gold
   const textColor = on === 'dark' ? COLORS.ivory : COLORS.navy
 
   return (
     <a href={href} onClick={onClick} className={`inline-flex items-center gap-3 ${className}`}>
-      <span style={{ width: iconSize, height: iconSize }} className="inline-flex shrink-0">
-        <LogoHeroFramedRsMark on={on} className="w-full h-full" />
-      </span>
+      <LogoIcon
+        size={iconSize}
+        color={markColor}
+        framed={iconVariant === 'nav' ? false : iconFramed}
+        variant={iconVariant}
+      />
       <Wordmark color={textColor} size="sm" />
     </a>
   )
