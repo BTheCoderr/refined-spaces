@@ -9,15 +9,17 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10">
           <div className="lg:col-span-1 flex justify-center lg:justify-start">
-            <img
-              src={publicAssetUrl('/images/logo/refined-spaces-footer-badge.png')}
-              alt="Refined Spaces badge"
-              width={144}
-              height={144}
-              loading="lazy"
-              decoding="async"
-              className="w-28 sm:w-32 md:w-36 h-auto shrink-0 object-contain bg-navy"
-            />
+            <div className="w-28 sm:w-32 md:w-36 shrink-0 bg-navy overflow-hidden">
+              <img
+                src={publicAssetUrl('/images/logo/refined-spaces-footer-mark.png')}
+                alt="Refined Spaces monogram"
+                width={144}
+                height={144}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-auto object-contain mix-blend-lighten"
+              />
+            </div>
           </div>
 
           <div>
