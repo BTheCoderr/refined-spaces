@@ -1,5 +1,11 @@
 # Refined Spaces
 
+<!-- repo-intro:start -->
+**Project snapshot:** Refined Spaces is a production property-management and curated-stays website for Providence, balancing guest conversion, owner trust, inquiry handling, and premium hospitality branding.
+
+**What it demonstrates:** React 19 · Vite 8 · Tailwind CSS 4 · Framer Motion · Netlify/Resend workflows.
+<!-- repo-intro:end -->
+
 Boutique-hotel-level property management in Providence, Rhode Island. Curated stays for guests. Trusted management for owners.
 
 **Live site:** [refinedspaces.netlify.app](https://refinedspaces.netlify.app/)
